@@ -1,0 +1,99 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="CheckMapp.Views.TripViews.AddEditTripView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True"
+    xmlns:Controls="clr-namespace:Microsoft.Phone.Maps.Controls;assembly=Microsoft.Phone.Maps"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    xmlns:maptk="clr-namespace:Microsoft.Phone.Maps.Toolkit;assembly=Microsoft.Phone.Controls.Toolkit"
+    xmlns:c4f="clr-namespace:Coding4Fun.Toolkit.Controls;assembly=Coding4Fun.Toolkit.Controls"
+    Loaded="PhoneApplicationPage_Loaded"
+    xmlns:myControl="clr-namespace:CheckMapp.Controls"
+    DataContext="{Binding AddEditTripViewModel, Source={StaticResource Locator}}">
+
+    <phone:PhoneApplicationPage.Resources>
+
+        <DataTemplate x:Key="ItemTemplate">
+            <StackPanel>
+                <toolkit:ContextMenuService.ContextMenu>
+                    <toolkit:ContextMenu Opened="ContextMenuNote_Opened" IsZoomEnabled="True" x:Name="ContextMenuNote" >
+                        <toolkit:MenuItem x:Name="DeleteFriend" Click="DeleteFriend_Click" Header="{Binding Path=LocalizedResources.Delete, Source={StaticResource LocalizedStrings}}" />
+                    </toolkit:ContextMenu>
+                </toolkit:ContextMenuService.ContextMenu>
+                <TextBlock Text="{Binding}" TextWrapping="Wrap" Style="{StaticResource PhoneTextGroupHeaderStyle}"></TextBlock>
+            </StackPanel>
+        </DataTemplate>
+
+    </phone:PhoneApplicationPage.Resources>
+    <!--LayoutRoot est la grille racine où tout le contenu de la page est placé-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contient le nom de l'application et le titre de la page-->
+        <StackPanel Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock Text="{Binding Path=LocalizedResources.ApplicationTitle, Source={StaticResource LocalizedStrings}}" Style="{StaticResource PhoneTextNormalStyle}"/>
+            <TextBlock x:Name="TitleTextblock" Text="[add/edit trip]" Margin="9,-7,0,0" Style="{StaticResource PanoramaItemHeaderTextStyle}"/>
+        </StackPanel>
+
+
+
+        <!--ContentPanel - placez tout contenu supplémentaire ici-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+
+            <ScrollViewer >
+                <StackPanel Grid.Row="0" Margin="12,17,0,28">
+
+                    <Grid Tap="HubTile_Tap" HorizontalAlignment="Left" Height="200" Width="200">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="1*"></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <toolkit:HubTile x:Name="hubTile"  IsFrozen="True" Grid.RowSpan="2" Height="200" Width="200" Source="{Binding MainImage,Converter={StaticResource ByteToImageConverter}}"></toolkit:HubTile>
+                        <TextBlock TextWrapping="Wrap" Style="{StaticResource PhoneTextLargeStyle}"  Text="{Binding Path=LocalizedResources.ChoosePicture, Source={StaticResource LocalizedStrings}}" Grid.Row="1" VerticalAlignment="Top" Margin="20,0,20,0"></TextBlock>
+                    </Grid>
+
+                    <TextBlock Text="{Binding Path=LocalizedResources.AddTripName, Source={StaticResource LocalizedStrings}}"  Style="{StaticResource PhoneTextLargeStyle}"/>
+                    <TextBox InputScope="Text" x:Name="NameTextBox" MaxLength="40" Text="{Binding TripName, Mode=TwoWay}"></TextBox>
+                   
+                    <TextBlock Text="{Binding Path=LocalizedResources.AddTripDate, Source={StaticResource LocalizedStrings}}"  Style="{StaticResource PhoneTextLargeStyle}"/>
+                    <toolkit:DatePicker IsEnabled="{Binding Trip.IsActif}" Name="datePicker"  Value="{Binding TripBeginDate, Mode=TwoWay}"></toolkit:DatePicker>
+
+                    <StackPanel Tap="StackPanel_Tap" Margin="0,15,0,0" Orientation="Horizontal">
+                        <c4f:RoundButton ButtonHeight="60" ButtonWidth="60"  x:Name="btnFriend"  ImageSource="/Images/small.add.png" />
+                        <TextBlock  Text="{Binding Path=LocalizedResources.TravelFriends, Source={StaticResource LocalizedStrings}}"  Style="{StaticResource PhoneTextLargeStyle}"/>
+                    </StackPanel>
+
+                    <ListBox Name="FriendLLS"  Margin="15,0,0,15"
+                                        ItemsSource="{Binding FriendList}"
+                                        ItemTemplate="{StaticResource ItemTemplate}"                     
+                                        />
+
+                    <TextBlock Text="{Binding Path=LocalizedResources.AddTripDeparture, Source={StaticResource LocalizedStrings}}"  Style="{StaticResource PhoneTextLargeStyle}" />
+                    <myControl:MapSelectControl CompleteAdress="False" Height="350" Latitude="{Binding DepartureLatitude,Mode=TwoWay}" PoiLocation="{Binding Departure, Mode=TwoWay}" Longitude="{Binding DepartureLongitude,Mode=TwoWay}"></myControl:MapSelectControl>
+
+                    <TextBlock Text="{Binding Path=LocalizedResources.AddTripArrival, Source={StaticResource LocalizedStrings}}"  Style="{StaticResource PhoneTextLargeStyle}"/>
+                    <myControl:MapSelectControl CompleteAdress="False"  x:Name="selectDest"  Height="350"  Latitude="{Binding DestinationLatitude,Mode=TwoWay}" PoiLocation="{Binding Destination, Mode=TwoWay}" Longitude="{Binding DestinationLongitude,Mode=TwoWay}"></myControl:MapSelectControl>
+
+                </StackPanel>
+            </ScrollViewer>
+        </Grid>
+    </Grid>
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
+            <shell:ApplicationBarIconButton  x:Name="IconSave"  Click="IconSave_Click"  IconUri="/Images/save.png" Text="[save]"/>
+            <shell:ApplicationBarIconButton  x:Name="IconCancel"  Click="IconCancel_Click"  IconUri="/Images/cancel.png" Text="[cancel]"/>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>
+</phone:PhoneApplicationPage>

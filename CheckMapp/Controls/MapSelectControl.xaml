@@ -1,0 +1,43 @@
+﻿<UserControl x:Class="CheckMapp.Controls.MapSelectControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+             Name="UserCtrl"
+    d:DesignHeight="480" d:DesignWidth="480"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    xmlns:Controls="clr-namespace:Microsoft.Phone.Maps.Controls;assembly=Microsoft.Phone.Maps"
+             Loaded="UserControl_Loaded">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="auto" />
+            </Grid.ColumnDefinitions>
+            <toolkit:PhoneTextBox InputScope="Text" TextChanged="PoiTextBox_TextChanged"  Hint="{Binding Path=LocalizedResources.DepDest, Source={StaticResource LocalizedStrings}}" x:Name="PoiTextBox"  DataContext="{Binding Path=.,ElementName=UserCtrl}" Text="{Binding PoiLocation, Mode=TwoWay}"></toolkit:PhoneTextBox>
+            <Button x:Name="btn_place" Width="114" Grid.Column="1" Click="btn_place_Click" >
+                <Image  Source="/Images/appbar.eye.min.png" Height="28"  />
+            </Button>
+        </Grid>
+        <Grid Grid.Row="1" Margin="12">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Border x:Name="BorderInternet" Background="Gray" >
+                <TextBlock TextWrapping="Wrap"  HorizontalAlignment="Center" Foreground="White" Style="{StaticResource PhoneTextSubtleStyle}" Text="{Binding Path=LocalizedResources.HoldFinger, Source={StaticResource LocalizedStrings}}"></TextBlock>
+            </Border>
+            <Controls:Map Grid.Row="1"  x:Name="myMap"   LandmarksEnabled="False" CartographicMode="Road" PedestrianFeaturesEnabled="False" ColorMode="Light" Hold="Map_Hold"  />
+        </Grid>
+
+    </Grid>
+</UserControl>

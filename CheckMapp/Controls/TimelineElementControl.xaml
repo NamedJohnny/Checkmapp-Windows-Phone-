@@ -1,0 +1,24 @@
+﻿<UserControl x:Class="CheckMapp.Controls.TimelineElementControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    Width="135" Height="115"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit">
+
+    <Grid x:Name="LayoutRoot" Background="Transparent" >
+        
+        <StackPanel Orientation="Horizontal">
+            <Polygon x:Name="left" Points="8,0 0,5, 8,10" Stroke="White" Fill="White" />
+            <Border BorderThickness="8,8,8,8" BorderBrush="White" Margin="-1,0,0,0">
+                <toolkit:HubTile Source="{Binding Trip.MainPictureData, Converter={StaticResource ByteToImageConverter}}" Title="Africa" Message="voyage"   Size="Small">
+                </toolkit:HubTile>
+            </Border>
+            <Polygon x:Name="right" Points="0,0 8,5, 0,10" Stroke="White" Fill="White" />
+        </StackPanel>
+    </Grid>
+</UserControl>

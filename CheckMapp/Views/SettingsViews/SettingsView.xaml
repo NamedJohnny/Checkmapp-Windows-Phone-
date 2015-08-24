@@ -1,0 +1,78 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="CheckMapp.Views.SettingsViews.SettingsView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True"
+    xmlns:facebookControls="clr-namespace:Facebook.Client.Controls;assembly=Facebook.Client"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    DataContext="{Binding SettingsViewModel, Source={StaticResource Locator}}"
+    >
+
+    <!--LayoutRoot est la grille racine où tout le contenu de la page est placé-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--Pivot Control-->
+        <phone:Pivot Grid.Row="0" Title="{Binding Path=LocalizedResources.ApplicationTitle, Source={StaticResource LocalizedStrings}}">
+            <!--Pivot item one-->
+            <phone:PivotItem x:Name="PivotSettings" Margin="0,0,0,30">
+                <Grid x:Name="ContentPanelParameters" Grid.Row="1" >
+                    <ScrollViewer  >
+                        <StackPanel Grid.Row="0" Margin="12,17,0,28">
+                            <TextBlock Text="{Binding Path=LocalizedResources.WifiOnly, Source={StaticResource LocalizedStrings}}"  Style="{StaticResource PhoneTextSmallStyle}"/>
+                            <toolkit:ToggleSwitch IsChecked="{Binding WifiOnly}" Checked="WifiOnlySwitch_Checked" Unchecked="WifiOnlySwitch_Unchecked" />
+
+                            <TextBlock Text="{Binding Path=LocalizedResources.Language, Source={StaticResource LocalizedStrings}}"  Style="{StaticResource PhoneTextSmallStyle}"/>
+                            <toolkit:ListPicker
+                                x:Name="languageListPicker"
+                                ItemsSource="{Binding LanguagesList}"
+                                SelectedIndex="{Binding LanguageIndex, Mode=TwoWay}">
+                            </toolkit:ListPicker>
+
+                            <TextBlock Text="{Binding Path=LocalizedResources.DataManagement, Source={StaticResource LocalizedStrings}}"  Style="{StaticResource PhoneTextSmallStyle}"/>
+                            <Button Visibility="{Binding IsEnabled, ElementName=btnImport, Converter={StaticResource ConvertBoolean}}" IsEnabled="{Binding Loading, Converter={StaticResource InvertBoolConverter}}" x:Name="btnImport" Click="btnImport_Click" Content="{Binding Path=LocalizedResources.Import, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Stretch" />
+                            <Button x:Name="btnExport" Click="btnExport_Click" Visibility="{Binding IsEnabled, ElementName=btnExport, Converter={StaticResource ConvertBoolean}}" IsEnabled="{Binding Loading, Converter={StaticResource InvertBoolConverter}}"  Content="{Binding Path=LocalizedResources.Export, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Stretch" />
+                            <StackPanel   Visibility="{Binding Loading, Converter={StaticResource ConvertBoolean}}">
+                                <TextBlock FontSize="15" Text="{Binding TypeProgress,Mode=TwoWay}" Style="{StaticResource PhoneTextNormalStyle}"></TextBlock>
+                                <ProgressBar Margin="0,5,0,5" Minimum="0" Maximum="100"  Value="{Binding ProgressPercent, Mode=TwoWay}" ></ProgressBar>
+                                <TextBlock FontSize="15" Text="{Binding ProgressText,Mode=TwoWay}" Style="{StaticResource PhoneTextNormalStyle}"></TextBlock>
+                            </StackPanel>
+
+                            <Button x:Name="btnCancel" Click="btnCancel_Click" Visibility="{Binding Loading, Converter={StaticResource ConvertBoolean}}" Content="{Binding Path=LocalizedResources.Cancel, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Stretch" Command="{Binding ExportCommand}"/>
+
+
+                        </StackPanel>
+                    </ScrollViewer>
+                </Grid>
+            </phone:PivotItem>
+
+            <!--Pivot item two-->
+            <phone:PivotItem Header="{Binding Path=LocalizedResources.About, Source={StaticResource LocalizedStrings}}">
+                <Grid x:Name="ContentPanelAbout" Grid.Row="1" >
+                    <ScrollViewer>
+                        <StackPanel Grid.Row="0" Margin="12,17,0,28">
+                            <Image Source="/Assets/logo.png" Width="120" HorizontalAlignment="Left" Margin="0,0,0,0" Height="120"/>
+                            <TextBlock Text="{Binding Path=LocalizedResources.AboutUs, Source={StaticResource LocalizedStrings}}" TextWrapping="Wrap" Style="{StaticResource PhoneTextSmallStyle}"/>
+                            <TextBlock Text="{Binding AppVersion}"  Style="{StaticResource PhoneTextSmallStyle}"/>
+                            <Button Margin="0,15,0,0" Click="BtnRateApp_Click" Content="{Binding Path=LocalizedResources.RateApp, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Stretch"/>
+                            <Button  Click="BtnWebsite_Click" Content="{Binding Path=LocalizedResources.VisitWebsite, Source={StaticResource LocalizedStrings}}" HorizontalAlignment="Stretch"/>
+                        </StackPanel>
+                    </ScrollViewer>
+                </Grid>
+            </phone:PivotItem>
+        </phone:Pivot>
+    </Grid>
+
+</phone:PhoneApplicationPage>

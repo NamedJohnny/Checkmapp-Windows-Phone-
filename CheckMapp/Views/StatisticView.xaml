@@ -1,0 +1,101 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="CheckMapp.Views.StatisticView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    xmlns:Controls="clr-namespace:Microsoft.Phone.Maps.Controls;assembly=Microsoft.Phone.Maps"
+    xmlns:my="clr-namespace:Microsoft.Phone.Maps.Toolkit;assembly=Microsoft.Phone.Controls.Toolkit"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True"
+    DataContext="{Binding StatisticViewModel, Source={StaticResource Locator}}">
+
+    <!--LayoutRoot est la grille racine où tout le contenu de la page est placé-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contient le nom de l'application et le titre de la page-->
+        <StackPanel  >
+            <TextBlock Text="{Binding TripName}" Style="{StaticResource PhoneTextNormalStyle}"/>
+            <TextBlock Margin="0,0,0,10" Text="{Binding Path=LocalizedResources.Statistic, Source={StaticResource LocalizedStrings}}"   Style="{StaticResource PhoneTextTitle1Style}"/>
+            <Controls:Map Loaded="statsMap_Loaded" Margin="0,0,0,10"  Name="statsMap"  Height="200" LandmarksEnabled="False" CartographicMode="Road" PedestrianFeaturesEnabled="False" ColorMode="Light">
+                <my:MapExtensions.Children>
+                    <my:MapItemsControl x:Name="MyMapItems">
+                        <my:MapItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <my:Pushpin GeoCoordinate="{Binding Coordinate}" Content="{Binding Name}" />
+                            </DataTemplate>
+                        </my:MapItemsControl.ItemTemplate>
+                    </my:MapItemsControl>
+                </my:MapExtensions.Children>
+            </Controls:Map>
+        </StackPanel>
+       
+
+        <!--ContentPanel - placez tout contenu supplémentaire ici-->
+
+        <Grid Grid.Row="1"  Grid.RowSpan="2" >
+        <ScrollViewer>
+                <StackPanel Orientation="Vertical">
+
+                    <StackPanel Orientation="Horizontal" >
+                        <Image Height="70"  Source="/Images/appbar.clipboard.variant.png"></Image>
+                        <TextBlock x:Name="NoteAllTime"  VerticalAlignment="Center" Width="400" TextWrapping="Wrap" Text="{Binding TripNoteAllTime}"  Style="{StaticResource PhoneTextLargeStyle}"/>
+                    </StackPanel>
+
+                    <StackPanel Visibility="{Binding IsActif, Converter={StaticResource ConvertBoolean}}" Orientation="Horizontal">
+                        <Image Height="70"  Source="/Images/appbar.calendar.day.png"></Image>
+                        <TextBlock x:Name="NoteToday" VerticalAlignment="Center" Width="400" TextWrapping="Wrap" Text="{Binding TripNoteToday}"  Style="{StaticResource PhoneTextLargeStyle}"/>
+                    </StackPanel>
+                    <Line X1="0" X2="1" Stretch="Fill" Stroke="White" StrokeThickness="1" />
+                    <StackPanel Orientation="Horizontal">
+                        <Image Height="70"  Source="/Images/feature.camera.png"></Image>
+                        <TextBlock x:Name="PictureAllTime" VerticalAlignment="Center" Width="400" TextWrapping="Wrap" Text="{Binding TripPictureAllTime}"  Style="{StaticResource PhoneTextLargeStyle}"/>
+                    </StackPanel>
+
+                    <StackPanel Visibility="{Binding IsActif, Converter={StaticResource ConvertBoolean}}" Orientation="Horizontal">
+                        <Image Height="70"  Source="/Images/appbar.calendar.day.png"></Image>
+                        <TextBlock x:Name="PictureToday" VerticalAlignment="Center" Width="400" TextWrapping="Wrap" Text="{Binding TripPictureToday}"  Style="{StaticResource PhoneTextLargeStyle}"/>
+                    </StackPanel>
+                    <Line X1="0" X2="1" Stretch="Fill"  Stroke="White" StrokeThickness="1" />
+                    <StackPanel Orientation="Horizontal" >
+                        <Image Height="70"  Source="/Images/appbar.plane.rotated.45.png"></Image>
+                        <TextBlock x:Name="TripBeginDate" VerticalAlignment="Center" Width="400" TextWrapping="Wrap" Text="{Binding TripBeginDate}"  Style="{StaticResource PhoneTextLargeStyle}"/>
+                    </StackPanel>
+
+                    <StackPanel x:Name="EndStack" Orientation="Horizontal">
+                        <Image Height="70"  Source="/Images/appbar.return.png"></Image>
+                        <TextBlock x:Name="TripEndDate" VerticalAlignment="Center" Width="400" TextWrapping="Wrap" Text="{Binding TripEndDate}"  Style="{StaticResource PhoneTextLargeStyle}"/>
+                    </StackPanel>
+                    <Line X1="0" X2="1" Stretch="Fill"  Stroke="White" StrokeThickness="1" />
+
+                    <StackPanel Visibility="{Binding HasFriends, Converter={StaticResource ConvertBoolean}}" Orientation="Horizontal" Margin="0,0,0,10">
+                        <Image Height="70"  Source="/Images/appbar.group.png"></Image>
+                        <StackPanel>
+                        <TextBlock  Text="{Binding Path=LocalizedResources.TravelFriends, Source={StaticResource LocalizedStrings}}"  Style="{StaticResource PhoneTextLargeStyle}"/>
+                        <ListBox Name="ListboxTest" ItemsSource="{Binding TripFriends}">
+                            <ListBox.ItemTemplate>
+                                <DataTemplate>
+                                    <TextBlock Margin="20,10,0,0" Style="{StaticResource PhoneTextGroupHeaderStyle}" Text="{Binding}" TextWrapping="Wrap"/>
+                                </DataTemplate>
+                            </ListBox.ItemTemplate>
+                        </ListBox>
+                        </StackPanel>
+                    </StackPanel>
+                    <Line X1="0" X2="1" Stretch="Fill"  Stroke="White" StrokeThickness="1" />
+
+                </StackPanel>
+            </ScrollViewer>
+        </Grid>
+    </Grid>
+
+</phone:PhoneApplicationPage>

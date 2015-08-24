@@ -1,0 +1,63 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="CheckMapp.Views.POIViews.AddEditPOIView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True"
+    xmlns:Controls="clr-namespace:Microsoft.Phone.Maps.Controls;assembly=Microsoft.Phone.Maps"
+    xmlns:myControl="clr-namespace:CheckMapp.Controls"
+    Loaded="PhoneApplicationPage_Loaded"
+    DataContext="{Binding AddEditPOIViewModel, Source={StaticResource Locator}}">
+
+    <!--LayoutRoot est la grille racine où tout le contenu de la page est placé-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contient le nom de l'application et le titre de la page-->
+        <StackPanel Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock Text="{Binding PointOfInterest.Trip.Name}" Style="{StaticResource PhoneTextNormalStyle}"/>
+            <TextBlock x:Name="TitleTextBox" Text="{Binding Path=LocalizedResources.AddPOI, Source={StaticResource LocalizedStrings}}" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+        </StackPanel>
+
+        <!--ContentPanel - placez tout contenu supplémentaire ici-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <StackPanel>
+                    <TextBlock Text="{Binding Path=LocalizedResources.NoteName, Source={StaticResource LocalizedStrings}}"  Style="{StaticResource PhoneTextLargeStyle}"/>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="auto" />
+                        </Grid.ColumnDefinitions>
+                        <toolkit:PhoneTextBox InputScope="Text"  Hint="{Binding Path=LocalizedResources.ExamplePointInterest, Source={StaticResource LocalizedStrings}}" Height="70" x:Name="txtBoxName" Text="{Binding PoiName, Mode=TwoWay}"></toolkit:PhoneTextBox>
+                        <Image Tap="Image_Tap" Grid.Column="1" Source="{Binding PointOfInterest.Type, Converter={StaticResource POITypeConverter}}" Height="80"  />
+                    </Grid>
+                    <TextBlock Text="{Binding Path=LocalizedResources.PlacePOI, Source={StaticResource LocalizedStrings}}"  Style="{StaticResource PhoneTextLargeStyle}"/>
+                </StackPanel>
+                <myControl:MapSelectControl Grid.Row="1" CompleteAdress="true" Latitude="{Binding Latitude,Mode=TwoWay}" PoiLocation="{Binding PoiLocation,Mode=TwoWay}" Longitude="{Binding Longitude,Mode=TwoWay}"></myControl:MapSelectControl>
+            </Grid>
+        </Grid>
+    </Grid>
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
+            <shell:ApplicationBarIconButton  x:Name="IconSave"  Click="IconSave_Click"  IconUri="/Images/save.png" Text="[save]"/>
+            <shell:ApplicationBarIconButton  x:Name="IconCancel"  Click="IconCancel_Click"  IconUri="/Images/cancel.png" Text="[cancel]"/>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>
+</phone:PhoneApplicationPage>

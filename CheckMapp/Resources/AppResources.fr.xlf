@@ -1,0 +1,640 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en-US" target-language="fr" original="AppResources.resx" tool-id="MultilingualAppToolkit" product-name="CheckMapp" product-version="1.0.4.2" build-num="4">
+    <header>
+      <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="3.1.1250.0" tool-company="Microsoft" />
+    </header>
+    <body>
+      <group id="Resx">
+        <trans-unit id="Resx/About" translate="yes" xml:space="preserve">
+          <source>about</source>
+          <target state="translated">à propos</target>
+          </trans-unit>
+        <trans-unit id="Resx/AddPicture" translate="yes" xml:space="preserve">
+          <source>Add picture</source>
+          <target state="translated">Ajouter une image</target>
+        </trans-unit>
+        <trans-unit id="Resx/AddTrip" translate="yes" xml:space="preserve">
+          <source>New trip</source>
+          <target state="needs-review-translation">Nouveau voyage</target>
+          </trans-unit>
+        <trans-unit id="Resx/AddTripName" translate="yes" xml:space="preserve">
+          <source>Trip Name</source>
+          <target state="translated">Nom du voyage</target>
+        </trans-unit>
+        <trans-unit id="Resx/AddTripDeparture" translate="yes" xml:space="preserve">
+          <source>Trip Departure</source>
+          <target state="translated">Lieu de départ</target>
+        </trans-unit>
+        <trans-unit id="Resx/AddTripDate" translate="yes" xml:space="preserve">
+          <source>Trip Date</source>
+          <target state="needs-review-translation">Date du voyage</target>
+          </trans-unit>
+        <trans-unit id="Resx/AddTripArrival" translate="yes" xml:space="preserve">
+          <source>Trip Arrival</source>
+          <target state="translated">Lieu d'arrivée</target>
+        </trans-unit>
+        <trans-unit id="Resx/AddNote" translate="yes" xml:space="preserve">
+          <source>Add note</source>
+          <target state="needs-review-translation">ajouter une note</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          </trans-unit>
+        <trans-unit id="Resx/AllTime" translate="yes" xml:space="preserve">
+          <source>All Time</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Tous les temps</target>
+        </trans-unit>
+        <trans-unit id="Resx/ApplicationTitle" translate="yes" xml:space="preserve">
+          <source>checkmapp</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">checkmapp</target>
+        </trans-unit>
+        <trans-unit id="Resx/ConfirmButton" translate="yes" xml:space="preserve">
+          <source>Confirm</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Confirmer</target>
+        </trans-unit>
+        <trans-unit id="Resx/ConfirmNewTrip" translate="yes" xml:space="preserve">
+          <source>Confirm Trip</source>
+          <target state="translated">Confirmer le voyage</target>
+        </trans-unit>
+        <trans-unit id="Resx/ContinueTrip" translate="yes" xml:space="preserve">
+          <source>Continue Trip</source>
+          <target state="translated">Continuer le voyage</target>
+        </trans-unit>
+        <trans-unit id="Resx/CountPhotos" translate="yes" xml:space="preserve">
+          <source>Photos : {0}</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Photos : {0}</target>
+        </trans-unit>
+        <trans-unit id="Resx/CountPOI" translate="yes" xml:space="preserve">
+          <source>P.o. Interest : {0}</source>
+          <target state="translated">P. d'intérêt : {0}</target>
+        </trans-unit>
+        <trans-unit id="Resx/CountNotes" translate="yes" xml:space="preserve">
+          <source>Notes : {0}</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Notes : {0}</target>
+        </trans-unit>
+        <trans-unit id="Resx/CurrentTrip" translate="yes" xml:space="preserve">
+          <source>current trip</source>
+          <target state="translated">voyage courant</target>
+        </trans-unit>
+        <trans-unit id="Resx/Date" translate="yes" xml:space="preserve">
+          <source>Date :</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Date :</target>
+        </trans-unit>
+        <trans-unit id="Resx/Day" translate="yes" xml:space="preserve">
+          <source>Day :</source>
+          <target state="needs-review-translation">Jour :</target>
+          </trans-unit>
+        <trans-unit id="Resx/Delete" translate="yes" xml:space="preserve">
+          <source>delete</source>
+          <target state="translated">supprimer</target></trans-unit>
+        <trans-unit id="Resx/Edit" translate="yes" xml:space="preserve">
+          <source>edit</source>
+          <target state="translated">modifier</target></trans-unit>
+        <trans-unit id="Resx/Home" translate="yes" xml:space="preserve">
+          <source>dashboard</source>
+          <target state="translated">accueil</target>
+        </trans-unit>
+        <trans-unit id="Resx/List" translate="yes" xml:space="preserve">
+          <source>list</source>
+          <target state="translated">liste</target>
+        </trans-unit>
+        <trans-unit id="Resx/Location" translate="yes" xml:space="preserve">
+          <source>Enter a location :</source>
+          <target state="translated">Spécifier un lieu :</target>
+        </trans-unit>
+        <trans-unit id="Resx/Map" translate="yes" xml:space="preserve">
+          <source>Map</source>
+          <target state="translated">Carte</target>
+        </trans-unit>
+        <trans-unit id="Resx/Message" translate="yes" xml:space="preserve">
+          <source>Message :</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Message :</target>
+        </trans-unit>
+        <trans-unit id="Resx/EditNote" translate="yes" xml:space="preserve">
+          <source>Edit note</source>
+          <target state="translated">Modifier la note</target>
+        </trans-unit>
+        <trans-unit id="Resx/NoteName" translate="yes" xml:space="preserve">
+          <source>Name</source>
+          <target state="translated">Nom</target>
+        </trans-unit>
+        <trans-unit id="Resx/NoteInterestPoint" translate="yes" xml:space="preserve">
+          <source>Point of Interest</source>
+          <target state="translated">Point d'intérêt</target>
+        </trans-unit>
+        <trans-unit id="Resx/NoteDate" translate="yes" xml:space="preserve">
+          <source>Date</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Date</target>
+        </trans-unit>
+        <trans-unit id="Resx/NoteContent" translate="yes" xml:space="preserve">
+          <source>Content</source>
+          <target state="translated">Contenu</target>
+        </trans-unit>
+        <trans-unit id="Resx/OldTrip" translate="yes" xml:space="preserve">
+          <source>older trips</source>
+          <target state="translated">voyages précédents</target>
+        </trans-unit>
+        <trans-unit id="Resx/POITitle" translate="yes" xml:space="preserve">
+          <source>Points of Interest</source>
+          <target state="translated">Points d'intérêt</target>
+        </trans-unit>
+        <trans-unit id="Resx/Rename" translate="yes" xml:space="preserve">
+          <source>Rename</source>
+          <target state="translated">Renommer</target>
+        </trans-unit>
+        <trans-unit id="Resx/ResourceFlowDirection" translate="yes" xml:space="preserve">
+          <source>LeftToRight</source>
+          <target state="translated">LeftToRight</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Controls the FlowDirection for all elements in the RootFrame. Set to the traditional direction of this resource file's language</note>
+          </trans-unit>
+        <trans-unit id="Resx/ResourceLanguage" translate="yes" xml:space="preserve">
+          <source>fr-FR</source>
+          <target state="translated">fr</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Controls the Language and ensures that the font for all elements in the RootFrame aligns with the app's language. Set to the language code of this resource file's language.</note>
+          </trans-unit>
+        <trans-unit id="Resx/SampleProperty" translate="yes" xml:space="preserve">
+          <source>Exemple de valeur de propriété d'exécution</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Exemple de valeur de propriété d'exécution</target>
+        </trans-unit>
+        <trans-unit id="Resx/SelectCountry" translate="yes" xml:space="preserve">
+          <source>Select a country : </source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Sélectionnez un pays : </target>
+        </trans-unit>
+        <trans-unit id="Resx/SelectDate" translate="yes" xml:space="preserve">
+          <source>Select a date : </source>
+          <target state="translated">Sélectionner une date : </target>
+        </trans-unit>
+        <trans-unit id="Resx/Settings" translate="yes" xml:space="preserve">
+          <source>Settings</source>
+          <target state="signed-off">Paramètres</target>
+          </trans-unit>
+        <trans-unit id="Resx/Share" translate="yes" xml:space="preserve">
+          <source>share on...</source>
+          <target state="needs-review-translation">partager sur...</target>
+          </trans-unit>
+        <trans-unit id="Resx/Sort" translate="yes" xml:space="preserve">
+          <source>Sort</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Tri</target>
+        </trans-unit>
+        <trans-unit id="Resx/SortByCountry" translate="yes" xml:space="preserve">
+          <source>Sort by Country</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Trier par pays</target>
+        </trans-unit>
+        <trans-unit id="Resx/SortByDate" translate="yes" xml:space="preserve">
+          <source>Sort by Date</source>
+          <target state="translated">Trier par date</target>
+        </trans-unit>
+        <trans-unit id="Resx/SortMode" translate="yes" xml:space="preserve">
+          <source>Sort Mode</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Mode de tri</target>
+        </trans-unit>
+        <trans-unit id="Resx/Timeline" translate="yes" xml:space="preserve">
+          <source>timeline</source>
+          <target state="translated">ligne de temps</target>
+        </trans-unit>
+        <trans-unit id="Resx/YourJournal" translate="yes" xml:space="preserve">
+          <source>your journal</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">votre journal</target>
+        </trans-unit>
+        <trans-unit id="Resx/YourMap" translate="yes" xml:space="preserve">
+          <source>your map</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">votre carte</target>
+        </trans-unit>
+        <trans-unit id="Resx/YourTimeLine" translate="yes" xml:space="preserve">
+          <source>your timeline</source>
+          <target state="translated">votre ligne de temps</target>
+        </trans-unit>
+        <trans-unit id="Resx/YourTravels" translate="yes" xml:space="preserve">
+          <source>your travels</source>
+          <target state="translated">vos voyages</target>
+        </trans-unit>
+        <trans-unit id="Resx/FinishTrip" translate="yes" xml:space="preserve">
+          <source>Finish the trip</source>
+          <target state="translated">Terminer le voyage</target>
+        </trans-unit>
+        <trans-unit id="Resx/AddPOI" translate="yes" xml:space="preserve">
+          <source>Add p.o. interest</source>
+          <target state="translated">Ajouter p. d'intérêt</target>
+        </trans-unit>
+        <trans-unit id="Resx/Statistic" translate="yes" xml:space="preserve">
+          <source>Statistics</source>
+          <target state="signed-off">Statistiques</target>
+          </trans-unit>
+        <trans-unit id="Resx/MyNotes" translate="yes" xml:space="preserve">
+          <source>my notes</source>
+          <target state="needs-review-translation">mes notes</target>
+          </trans-unit>
+        <trans-unit id="Resx/SeePhotos" translate="yes" xml:space="preserve">
+          <source>see photos...</source>
+          <target state="translated">voir les photos...</target>
+        </trans-unit>
+        <trans-unit id="Resx/MyPhoto" translate="yes" xml:space="preserve">
+          <source>my photos</source>
+          <target state="needs-review-translation">mes photos</target>
+          </trans-unit>
+        <trans-unit id="Resx/Save" translate="yes" xml:space="preserve">
+          <source>Save</source>
+          <target state="translated">Enregistrer</target>
+        </trans-unit>
+        <trans-unit id="Resx/Description" translate="yes" xml:space="preserve">
+          <source>Description</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Description</target>
+        </trans-unit>
+        <trans-unit id="Resx/EditTrip" translate="yes" xml:space="preserve">
+          <source>Edit trip</source>
+          <target state="translated">Modifier le voyage</target>
+        </trans-unit>
+        <trans-unit id="Resx/ChoosePicture" translate="yes" xml:space="preserve">
+          <source>choose picture</source>
+          <target state="needs-review-translation">choisir photo</target>
+          </trans-unit>
+        <trans-unit id="Resx/ConfirmationDeleteTrip" translate="yes" xml:space="preserve">
+          <source>Are you sure you want to delete this trip?</source>
+          <target state="translated">Êtes-vous sûr de vouloir supprimer ce voyage?</target>
+        </trans-unit>
+        <trans-unit id="Resx/Select" translate="yes" xml:space="preserve">
+          <source>select</source>
+          <target state="translated">sélectionner</target>
+        </trans-unit>
+        <trans-unit id="Resx/ConfirmDeletePOIs" translate="yes" xml:space="preserve">
+          <source>Are you sure you want to delete theses point of interests? (The notes and pictures with these points of interest will also be deleted)</source>
+          <target state="signed-off">Êtes-vous sûr de vouloir supprimer ces points d'intérêt? (Les notes et les photos avec ces points d'intérêt seront aussi supprimés)</target>
+          </trans-unit>
+        <trans-unit id="Resx/MyPoi" translate="yes" xml:space="preserve">
+          <source>points of interest</source>
+          <target state="signed-off">points d'intérêt</target></trans-unit>
+        <trans-unit id="Resx/Lang_French" translate="yes" xml:space="preserve">
+          <source>French</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Français</target>
+        </trans-unit>
+        <trans-unit id="Resx/Language" translate="yes" xml:space="preserve">
+          <source>Language</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Langue</target>
+        </trans-unit>
+        <trans-unit id="Resx/WifiOnly" translate="yes" xml:space="preserve">
+          <source>Use Wifi only</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Utiliser uniquement la Wi-Fi</target>
+        </trans-unit>
+        <trans-unit id="Resx/VersionNumber" translate="yes" xml:space="preserve">
+          <source>Version number</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Numéro de version</target>
+        </trans-unit>
+        <trans-unit id="Resx/Error_EmptyPicture" translate="yes" xml:space="preserve">
+          <source>You have to choose a picture</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Vous devez choisir une image</target>
+        </trans-unit>
+        <trans-unit id="Resx/NotConnected" translate="yes" xml:space="preserve">
+          <source>Internet connection missing</source>
+          <target state="needs-review-translation">Connexion internet désactivée</target>
+          </trans-unit>
+        <trans-unit id="Resx/InvalideSearch" translate="yes" xml:space="preserve">
+          <source>No result found for : {0}</source>
+          <target state="translated">Aucun résultat trouvé pour : {0}</target>
+        </trans-unit>
+        <trans-unit id="Resx/Warning" translate="yes" xml:space="preserve">
+          <source>Warning</source>
+          <target state="translated">Avertissement</target>
+        </trans-unit>
+        <trans-unit id="Resx/ExamplePointInterest" translate="yes" xml:space="preserve">
+          <source>Eiffel Tower</source>
+          <target state="translated">Tour Effeil</target>
+        </trans-unit>
+        <trans-unit id="Resx/EditPoi" translate="yes" xml:space="preserve">
+          <source>edit p.o. interest</source>
+          <target state="translated">modifier p. d'intérêt</target>
+        </trans-unit>
+        <trans-unit id="Resx/PlacePOI" translate="yes" xml:space="preserve">
+          <source>Place</source>
+          <target state="translated">Lieu</target>
+        </trans-unit>
+        <trans-unit id="Resx/NoteAllTime" translate="yes" xml:space="preserve">
+          <source>{0} note(s) in this trip</source>
+          <target state="signed-off">{0} note(s) dans ce voyage</target>
+          </trans-unit>
+        <trans-unit id="Resx/PictureToday" translate="yes" xml:space="preserve">
+          <source>{0} picture(s) today</source>
+          <target state="translated">{0} photo(s) aujourd'hui</target></trans-unit>
+        <trans-unit id="Resx/PictureAllTime" translate="yes" xml:space="preserve">
+          <source>{0} picture(s) in this trip</source>
+          <target state="translated">{0} photo(s) dans ce voyage</target></trans-unit>
+        <trans-unit id="Resx/DefaultPoi" translate="yes" xml:space="preserve">
+          <source>No POI selected</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Aucun POI sélectionné</target>
+        </trans-unit>
+        <trans-unit id="Resx/ConfirmFinishTrip" translate="yes" xml:space="preserve">
+          <source>Are you sure you want to finish this trip?</source>
+          <target state="signed-off">Êtes-vous certain de vouloir terminer ce voyage?</target></trans-unit>
+        <trans-unit id="Resx/TravelFriends" translate="yes" xml:space="preserve">
+          <source>Trip Friends</source>
+          <target state="signed-off">Amis de voyage</target>
+          </trans-unit>
+        <trans-unit id="Resx/NoPoi" translate="yes" xml:space="preserve">
+          <source>None</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Aucun</target>
+        </trans-unit>
+        <trans-unit id="Resx/TripEndDate" translate="yes" xml:space="preserve">
+          <source>End date : {0}</source>
+          <target state="translated">Fin du voyage : {0}</target></trans-unit>
+        <trans-unit id="Resx/YourPosition" translate="yes" xml:space="preserve">
+          <source>your position</source>
+          <target state="translated">votre position</target>
+        </trans-unit>
+        <trans-unit id="Resx/TripBeginDate" translate="yes" xml:space="preserve">
+          <source>Begin date : {0}</source>
+          <target state="translated">Début du voyage : {0}</target></trans-unit>
+        <trans-unit id="Resx/NoteToday" translate="yes" xml:space="preserve">
+          <source>{0} note(s) today</source>
+          <target state="translated">{0} note(s) aujourd'hui</target></trans-unit>
+        <trans-unit id="Resx/Loading" translate="yes" xml:space="preserve">
+          <source>Loading...</source>
+          <target state="signed-off">Chargement...</target>
+          </trans-unit>
+        <trans-unit id="Resx/IamHere" translate="yes" xml:space="preserve">
+          <source>I am at : {0}</source>
+          <target state="translated">Je suis à : {0}</target>
+        </trans-unit>
+        <trans-unit id="Resx/Import" translate="yes" xml:space="preserve">
+          <source>Import data</source>
+          <target state="translated">Importer les données</target>
+        </trans-unit>
+        <trans-unit id="Resx/RestartApp" translate="yes" xml:space="preserve">
+          <source>You will have to restart the application</source>
+          <target state="translated">Un redémarrage est nécessaire</target>
+        </trans-unit>
+        <trans-unit id="Resx/DBFileName" translate="yes" xml:space="preserve">
+          <source>Checkmapp.sdf</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Checkmapp.sdf</target>
+        </trans-unit>
+        <trans-unit id="Resx/Export" translate="yes" xml:space="preserve">
+          <source>Export data</source>
+          <target state="translated">Exporter les données</target>
+        </trans-unit>
+        <trans-unit id="Resx/DataManagement" translate="yes" xml:space="preserve">
+          <source>Data Management (backups)</source>
+          <target state="needs-review-translation">Gestion des données (sauvegardes)</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          </trans-unit>
+        <trans-unit id="Resx/ConfirmationImport" translate="yes" xml:space="preserve">
+          <source>Are you sure you want to import these data? (This will replace your current data)</source>
+          <target state="translated">Êtes-vous sûr de vouloir importer ces données? (Cela va remplacer ceux actuels)</target>
+ </trans-unit>
+        <trans-unit id="Resx/LocationError" translate="yes" xml:space="preserve">
+          <source>Your location is disable in your phone settings.</source>
+          <target state="signed-off">La localisation de votre position est désactivée dans les paramètres de votre téléphone.</target>
+          </trans-unit>
+        <trans-unit id="Resx/FileNotFound" translate="yes" xml:space="preserve">
+          <source>No valid file has been found in folder Checkmapp in your OneDrive.</source>
+          <target state="translated">Aucun fichier valide n'a été trouvé dans le dossier Checkmapp de votre OneDrive.</target>
+        </trans-unit>
+        <trans-unit id="Resx/GetToPOI" translate="yes" xml:space="preserve">
+          <source>getting there...</source>
+          <target state="translated">s'y rendre...</target>
+        </trans-unit>
+        <trans-unit id="Resx/AppCalendar" translate="yes" xml:space="preserve">
+          <source>Do you want to add this trip in your calendar?</source>
+          <target state="translated">Voulez-vous ajouter ce voyage à votre calendrier?</target>
+        </trans-unit>
+        <trans-unit id="Resx/Shopping" translate="yes" xml:space="preserve">
+          <source>Shopping</source>
+          <target state="translated">Magasinage</target>
+        </trans-unit>
+        <trans-unit id="Resx/SelectType" translate="yes" xml:space="preserve">
+          <source>Select type</source>
+          <target state="translated">Sélectionner le type</target>
+        </trans-unit>
+        <trans-unit id="Resx/Other" translate="yes" xml:space="preserve">
+          <source>Other</source>
+          <target state="translated">Autre</target>
+        </trans-unit>
+        <trans-unit id="Resx/ImportLoading" translate="yes" xml:space="preserve">
+          <source>Import in progress...</source>
+          <target state="translated">Importation en cours...</target>
+        </trans-unit>
+        <trans-unit id="Resx/InternetConnectionSettings" translate="yes" xml:space="preserve">
+          <source>Your internet connection is offline. </source>
+          <target state="translated">Votre connexion internet est désactivée.</target>
+        </trans-unit>
+        <trans-unit id="Resx/POIObject" translate="yes" xml:space="preserve">
+          <source>What do you want to do with the objects (notes, pictures) related to the point of interest?</source>
+          <target state="signed-off">Que voulez-vous faire avec les objets (notes, photos) reliés au point d'intérêt?</target>
+          </trans-unit>
+        <trans-unit id="Resx/PlaceNearAdd" translate="yes" xml:space="preserve">
+          <source>Do you want to add it to your points of interest?</source>
+          <target state="signed-off">Voulez-vous l'ajouter à vos points d'intérêt?</target></trans-unit>
+        <trans-unit id="Resx/PlaceNearURI" translate="yes" xml:space="preserve">
+          <source>http://api.geonames.org/findNearbyWikipediaJSON?</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">http://API.geonames.org/findNearbyWikipediaJSON?</target>
+        </trans-unit>
+        <trans-unit id="Resx/PlaceNearUsername" translate="yes" xml:space="preserve">
+          <source>checkmapp</source>
+          <target state="signed-off" state-qualifier="mt-suggestion">checkmapp</target>
+          </trans-unit>
+        <trans-unit id="Resx/SetEndDate" translate="yes" xml:space="preserve">
+          <source>Set the end date</source>
+          <target state="translated">Définir la date de fin</target>
+        </trans-unit>
+        <trans-unit id="Resx/ValidatorEndDate" translate="yes" xml:space="preserve">
+          <source>The end date must be greater than the start date.</source>
+          <target state="translated">La date de fin doit être supérieure à la date de début du voyage.</target></trans-unit>
+        <trans-unit id="Resx/VisitWebsite" translate="yes" xml:space="preserve">
+          <source>Visit our website</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Visitez notre site Web</target>
+        </trans-unit>
+        <trans-unit id="Resx/PlaceNearYou" translate="yes" xml:space="preserve">
+          <source>Places near you</source>
+          <target state="translated">Lieux près de vous</target>
+        </trans-unit>
+        <trans-unit id="Resx/PlaceNearLocatePhone" translate="yes" xml:space="preserve">
+          <source>Locating your phone...</source>
+          <target state="translated">Localisation de votre téléphone en cours...</target>
+        </trans-unit>
+        <trans-unit id="Resx/Add" translate="yes" xml:space="preserve">
+          <source>Add</source>
+          <target state="translated">Ajouter</target>
+        </trans-unit>
+        <trans-unit id="Resx/HoldFinger" translate="yes" xml:space="preserve">
+          <source>Hold finger down on map to locate the place</source>
+          <target state="translated">Tenir le doigt enfoncé sur la carte pour localiser l'endroit</target>
+        </trans-unit>
+        <trans-unit id="Resx/ResultPOI" translate="yes" xml:space="preserve">
+          <source>{0} points of interest found near you.</source>
+          <target state="translated">{0} points d'intérêt trouvés près de vous.</target>
+        </trans-unit>
+        <trans-unit id="Resx/ValidatorEndDateNow" translate="yes" xml:space="preserve">
+          <source>The end date must be lower or equal than the current date.</source>
+          <target state="translated">La date de fin doit être inférieure ou égale à la date actuelle.</target>
+        </trans-unit>
+        <trans-unit id="Resx/BuyApp" translate="yes" xml:space="preserve">
+          <source>Do not forget to buy the full version! (Days remaining : {0})</source>
+          <target state="signed-off">N'oubliez pas d'acheter la version complète! (Jours restants : {0})</target></trans-unit>
+        <trans-unit id="Resx/ContinueTrial" translate="yes" xml:space="preserve">
+          <source>Continue Trial</source>
+          <target state="translated">Continuer la version d'essai</target>
+        </trans-unit>
+        <trans-unit id="Resx/TrialOver" translate="yes" xml:space="preserve">
+          <source>Your trial is over.</source>
+          <target state="translated">Votre version d'essai est terminé.</target>
+        </trans-unit>
+        <trans-unit id="Resx/Previous" translate="yes" xml:space="preserve">
+          <source>Previous</source>
+          <target state="translated">Précédent</target>
+        </trans-unit>
+        <trans-unit id="Resx/CannotChoosePic" translate="yes" xml:space="preserve">
+          <source>An error has occured with this picture.</source>
+          <target state="translated">Une erreur est survenue avec cette photo.</target>
+        </trans-unit>
+        <trans-unit id="Resx/Next" translate="yes" xml:space="preserve">
+          <source>Next</source>
+          <target state="translated">Suivant</target>
+        </trans-unit>
+        <trans-unit id="Resx/BuyNow" translate="yes" xml:space="preserve">
+          <source>Buy Now</source>
+          <target state="translated">Acheter maintenant</target>
+        </trans-unit>
+        <trans-unit id="Resx/LangRestartApp" translate="yes" xml:space="preserve">
+          <source>You will have to restart the application to change the language.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Vous devrez redémarrer l'application pour changer la langue.</target>
+        </trans-unit>
+        <trans-unit id="Resx/NullPOIObject" translate="yes" xml:space="preserve">
+          <source>Remove association with this POI</source>
+          <target state="translated">Enlever le lien avec ce POI</target>
+        </trans-unit>
+        <trans-unit id="Resx/DeletePOIObject" translate="yes" xml:space="preserve">
+          <source>Delete objects too</source>
+          <target state="translated">Supprimer aussi les objets</target>
+        </trans-unit>
+        <trans-unit id="Resx/ExportLoading" translate="yes" xml:space="preserve">
+          <source>Export in progress...</source>
+          <target state="translated">Exportation en cours...</target>
+        </trans-unit>
+        <trans-unit id="Resx/Restaurant" translate="yes" xml:space="preserve">
+          <source>Restaurant</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Restaurant</target>
+        </trans-unit>
+        <trans-unit id="Resx/Park" translate="yes" xml:space="preserve">
+          <source>Park</source>
+          <target state="translated">Parc</target>
+        </trans-unit>
+        <trans-unit id="Resx/Musee" translate="yes" xml:space="preserve">
+          <source>Museum</source>
+          <target state="translated">Musée</target>
+        </trans-unit>
+        <trans-unit id="Resx/Monument" translate="yes" xml:space="preserve">
+          <source>Monument</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Monument</target>
+        </trans-unit>
+        <trans-unit id="Resx/Coffee" translate="yes" xml:space="preserve">
+          <source>Coffee</source>
+          <target state="translated">Café</target>
+        </trans-unit>
+        <trans-unit id="Resx/DepDest" translate="yes" xml:space="preserve">
+          <source>city, (state, province, disctrict), country</source>
+          <target state="needs-review-translation">ville, (état, province, disctrict), pays</target>
+          </trans-unit>
+        <trans-unit id="Resx/InternetConnectionMap" translate="yes" xml:space="preserve">
+          <source>Your internet connection is offline. To access map features you need internet connection or download maps from your cellphone.</source>
+          <target state="signed-off">Votre connexion internet est désactivée. Pour accéder aux fonctionnalités de la carte, vous avez besoin de connexion internet ou de télécharger les cartes au préalable.</target></trans-unit>
+        <trans-unit id="Resx/Error_EmptyName" translate="yes" xml:space="preserve">
+          <source>You have to specify a name</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Vous devez spécifier un nom</target>
+        </trans-unit>
+        <trans-unit id="Resx/Error_EmptyMessage" translate="yes" xml:space="preserve">
+          <source>You have to specify a message</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Vous devez spécifier un message</target>
+        </trans-unit>
+        <trans-unit id="Resx/Error_EmptyDescription" translate="yes" xml:space="preserve">
+          <source>You have to specify a description</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Vous devez spécifier une description</target>
+        </trans-unit>
+        <trans-unit id="Resx/Error_EmptyCoordinates" translate="yes" xml:space="preserve">
+          <source>You have to specify a departure and a destination</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Vous devez spécifier un départ et une destination</target>
+        </trans-unit>
+        <trans-unit id="Resx/ErrorsDetected" translate="yes" xml:space="preserve">
+          <source>The following errors occured :</source>
+          <target state="translated">Les erreurs suivantes se sont produites :</target>
+        </trans-unit>
+        <trans-unit id="Resx/Errors" translate="yes" xml:space="preserve">
+          <source>Errors</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Erreurs</target>
+        </trans-unit>
+        <trans-unit id="Resx/ClearHistory" translate="yes" xml:space="preserve">
+          <source>Clear the history</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Effacer l'historique</target>
+        </trans-unit>
+        <trans-unit id="Resx/RateApp" translate="yes" xml:space="preserve">
+          <source>Rate this app</source>
+          <target state="translated">Évaluer l'application</target>
+        </trans-unit>
+        <trans-unit id="Resx/CheckUpdates" translate="yes" xml:space="preserve">
+          <source>Check for updates</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Mises à jour disponibles</target>
+        </trans-unit>
+        <trans-unit id="Resx/AboutUs" translate="yes" xml:space="preserve">
+          <source>Checkmapp is an application that let you manage all your trips around the world. You can save notes, pictures and points of interest. That way, you can keep the best memories of your travels and share them with your friends.
+
+John-William Forcier
+Félix Baril
+Alexandre Roy</source>
+          <target state="needs-review-translation">Checkmapp est une application permettant de garder l'historique de ces voyages à travers le monde. Vous pouvez créer des notes, des photos et des points d'intérêt. De cette façon, vous pouvez garder de meilleurs souvenirs de vos aventures et les partager à vos proches.
+
+John-William Forcier
+Félix Baril
+Alexandre Roy</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          </trans-unit>
+        <trans-unit id="Resx/AutoSync" translate="yes" xml:space="preserve">
+          <source>Auto sync the data</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Synchronisation automatique de données</target>
+        </trans-unit>
+        <trans-unit id="Resx/Lang_English" translate="yes" xml:space="preserve">
+          <source>English</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Anglais</target>
+        </trans-unit>
+        <trans-unit id="Resx/ConfirmDeletePOI" translate="yes" xml:space="preserve">
+          <source>Are you sure you want to delete this point of interest? (The notes and pictures with this point of interest will also be deleted)</source>
+          <target state="signed-off">Êtes-vous sûr de vouloir supprimer ce point d'intérêt? (Les notes et les photos avec ce point d'intérêt seront aussi supprimés)</target>
+          </trans-unit>
+        <trans-unit id="Resx/ConfirmationDeletePictures" translate="yes" xml:space="preserve">
+          <source>Are you sure you want to delete these photos?</source>
+          <target state="translated">Êtes-vous sûr de vouloir supprimer ces photos?</target>
+        </trans-unit>
+        <trans-unit id="Resx/ConfirmationDeletePicture" translate="yes" xml:space="preserve">
+          <source>Are you sure you want to delete this photo?</source>
+          <target state="translated">Êtes-vous sûr de vouloir supprimer cette photo?</target>
+        </trans-unit>
+        <trans-unit id="Resx/ConfirmationDeleteNotes" translate="yes" xml:space="preserve">
+          <source>Are you sure you want to delete theses notes?</source>
+          <target state="translated">Êtes-vous sûr de vouloir supprimer ces notes?</target>
+        </trans-unit>
+        <trans-unit id="Resx/ConfirmationDeleteNote" translate="yes" xml:space="preserve">
+          <source>Are you sure you want to delete this note?</source>
+          <target state="translated">Êtes-vous sûr de vouloir supprimer cette note?</target>
+        </trans-unit>
+        <trans-unit id="Resx/EditPicture" translate="yes" xml:space="preserve">
+          <source>Edit picture</source>
+          <target state="translated">Modifier la photo</target>
+        </trans-unit>
+        <trans-unit id="Resx/Cancel" translate="yes" xml:space="preserve">
+          <source>Cancel</source>
+          <target state="translated">Annuler</target>
+        </trans-unit>
+        <trans-unit id="Resx/SeeNotes" translate="yes" xml:space="preserve">
+          <source>see notes...</source>
+          <target state="translated">voir les notes...</target>
+        </trans-unit>
+        <trans-unit id="Resx/POITripTitle" translate="yes" xml:space="preserve">
+          <source>Points of interest ({0})</source>
+          <target state="needs-review-translation">Points d'intérêt ({0})</target>
+          </trans-unit>
+        <trans-unit id="Resx/PhotoTripTitle" translate="yes" xml:space="preserve">
+          <source>Photos ({0})</source>
+          <target state="needs-review-translation">Photos ({0})</target>
+          </trans-unit>
+        <trans-unit id="Resx/NoteTripTitle" translate="yes" xml:space="preserve">
+          <source>Notes ({0})</source>
+          <target state="needs-review-translation">Notes ({0})</target>
+          </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

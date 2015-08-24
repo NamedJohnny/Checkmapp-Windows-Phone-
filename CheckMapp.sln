@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CheckMapp", "CheckMapp\CheckMapp.csproj", "{F4C51A4A-35EF-4E72-A5C5-F9C8D0A4EBBD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|ARM = Debug|ARM
+		Debug|x86 = Debug|x86
+		DebugTrial|Any CPU = DebugTrial|Any CPU
+		DebugTrial|ARM = DebugTrial|ARM
+		DebugTrial|x86 = DebugTrial|x86
+		Release|Any CPU = Release|Any CPU
+		Release|ARM = Release|ARM
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F4C51A4A-35EF-4E72-A5C5-F9C8D0A4EBBD}.Debug|Any CPU.ActiveCfg = Debug|ARM
+		{F4C51A4A-35EF-4E72-A5C5-F9C8D0A4EBBD}.Debug|Any CPU.Build.0 = Debug|ARM
+		{F4C51A4A-35EF-4E72-A5C5-F9C8D0A4EBBD}.Debug|Any CPU.Deploy.0 = Debug|ARM
+		{F4C51A4A-35EF-4E72-A5C5-F9C8D0A4EBBD}.Debug|ARM.ActiveCfg = Debug|ARM
+		{F4C51A4A-35EF-4E72-A5C5-F9C8D0A4EBBD}.Debug|ARM.Build.0 = Debug|ARM
+		{F4C51A4A-35EF-4E72-A5C5-F9C8D0A4EBBD}.Debug|ARM.Deploy.0 = Debug|ARM
+		{F4C51A4A-35EF-4E72-A5C5-F9C8D0A4EBBD}.Debug|x86.ActiveCfg = Debug|x86
+		{F4C51A4A-35EF-4E72-A5C5-F9C8D0A4EBBD}.Debug|x86.Build.0 = Debug|x86
+		{F4C51A4A-35EF-4E72-A5C5-F9C8D0A4EBBD}.Debug|x86.Deploy.0 = Debug|x86
+		{F4C51A4A-35EF-4E72-A5C5-F9C8D0A4EBBD}.DebugTrial|Any CPU.ActiveCfg = DebugTrial|ARM
+		{F4C51A4A-35EF-4E72-A5C5-F9C8D0A4EBBD}.DebugTrial|Any CPU.Build.0 = DebugTrial|ARM
+		{F4C51A4A-35EF-4E72-A5C5-F9C8D0A4EBBD}.DebugTrial|Any CPU.Deploy.0 = DebugTrial|ARM
+		{F4C51A4A-35EF-4E72-A5C5-F9C8D0A4EBBD}.DebugTrial|ARM.ActiveCfg = DebugTrial|ARM
+		{F4C51A4A-35EF-4E72-A5C5-F9C8D0A4EBBD}.DebugTrial|ARM.Build.0 = DebugTrial|ARM
+		{F4C51A4A-35EF-4E72-A5C5-F9C8D0A4EBBD}.DebugTrial|ARM.Deploy.0 = DebugTrial|ARM
+		{F4C51A4A-35EF-4E72-A5C5-F9C8D0A4EBBD}.DebugTrial|x86.ActiveCfg = DebugTrial|x86
+		{F4C51A4A-35EF-4E72-A5C5-F9C8D0A4EBBD}.DebugTrial|x86.Build.0 = DebugTrial|x86
+		{F4C51A4A-35EF-4E72-A5C5-F9C8D0A4EBBD}.DebugTrial|x86.Deploy.0 = DebugTrial|x86
+		{F4C51A4A-35EF-4E72-A5C5-F9C8D0A4EBBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4C51A4A-35EF-4E72-A5C5-F9C8D0A4EBBD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4C51A4A-35EF-4E72-A5C5-F9C8D0A4EBBD}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{F4C51A4A-35EF-4E72-A5C5-F9C8D0A4EBBD}.Release|ARM.ActiveCfg = Release|ARM
+		{F4C51A4A-35EF-4E72-A5C5-F9C8D0A4EBBD}.Release|ARM.Build.0 = Release|ARM
+		{F4C51A4A-35EF-4E72-A5C5-F9C8D0A4EBBD}.Release|ARM.Deploy.0 = Release|ARM
+		{F4C51A4A-35EF-4E72-A5C5-F9C8D0A4EBBD}.Release|x86.ActiveCfg = Release|x86
+		{F4C51A4A-35EF-4E72-A5C5-F9C8D0A4EBBD}.Release|x86.Build.0 = Release|x86
+		{F4C51A4A-35EF-4E72-A5C5-F9C8D0A4EBBD}.Release|x86.Deploy.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

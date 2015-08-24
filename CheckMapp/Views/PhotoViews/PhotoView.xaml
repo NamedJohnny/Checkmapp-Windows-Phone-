@@ -1,0 +1,35 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="CheckMapp.Views.PhotoViews.PhotoView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="false"
+    SupportedOrientations="PortraitOrLandscape"
+     xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    Loaded="PhoneApplicationPage_Loaded"
+     xmlns:myControl="clr-namespace:CheckMapp.Controls"
+    DataContext="{Binding PhotoViewModel, Source={StaticResource Locator}}">
+
+    <myControl:PinchAndZoomImage  x:Name="myImage" Tap="img_Tap">
+            <toolkit:GestureService.GestureListener>
+                <toolkit:GestureListener Flick="GestureListener_Flick"/>
+            </toolkit:GestureService.GestureListener>
+        </myControl:PinchAndZoomImage>
+
+    
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" Mode="Minimized" IsMenuEnabled="False">
+            <!--<shell:ApplicationBarIconButton   x:Name="IconShare"  Click="IconShare_Click"  IconUri="/Images/appbar.social.sharethis.png" Text="[share]"/>-->
+            <shell:ApplicationBarIconButton  x:Name="IconEdit"  Click="IconEdit_Click"  IconUri="/Images/edit.png" Text="[edit]"/>
+            <shell:ApplicationBarIconButton  x:Name="IconDelete"  Click="IconDelete_Click"  IconUri="/Images/appbar.delete.png" Text="[delete]"/>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>
+
+</phone:PhoneApplicationPage>

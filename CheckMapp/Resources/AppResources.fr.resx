@@ -1,0 +1,600 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ResourceFlowDirection" xml:space="preserve">
+    <value>LeftToRight</value>
+    <comment>Controls the FlowDirection for all elements in the RootFrame. Set to the traditional direction of this resource file's language</comment>
+  </data>
+  <data name="ResourceLanguage" xml:space="preserve">
+    <value>fr</value>
+    <comment>Controls the Language and ensures that the font for all elements in the RootFrame aligns with the app's language. Set to the language code of this resource file's language.</comment>
+  </data>
+  <data name="About" xml:space="preserve">
+    <value>à propos</value>
+  </data>
+  <data name="AddPicture" xml:space="preserve">
+    <value>Ajouter une image</value>
+  </data>
+  <data name="AddTrip" xml:space="preserve">
+    <value>Nouveau voyage</value>
+  </data>
+  <data name="AddTripName" xml:space="preserve">
+    <value>Nom du voyage</value>
+  </data>
+  <data name="AddTripDeparture" xml:space="preserve">
+    <value>Lieu de départ</value>
+  </data>
+  <data name="AddTripDate" xml:space="preserve">
+    <value>Date du voyage</value>
+  </data>
+  <data name="AddTripArrival" xml:space="preserve">
+    <value>Lieu d'arrivée</value>
+  </data>
+  <data name="AddNote" xml:space="preserve">
+    <value>ajouter une note</value>
+    <comment></comment>
+  </data>
+  <data name="AllTime" xml:space="preserve">
+    <value>Tous les temps</value>
+  </data>
+  <data name="ApplicationTitle" xml:space="preserve">
+    <value>checkmapp</value>
+  </data>
+  <data name="ConfirmButton" xml:space="preserve">
+    <value>Confirmer</value>
+  </data>
+  <data name="ConfirmNewTrip" xml:space="preserve">
+    <value>Confirmer le voyage</value>
+  </data>
+  <data name="ContinueTrip" xml:space="preserve">
+    <value>Continuer le voyage</value>
+  </data>
+  <data name="CountPhotos" xml:space="preserve">
+    <value>Photos : {0}</value>
+  </data>
+  <data name="CountPOI" xml:space="preserve">
+    <value>P. d'intérêt : {0}</value>
+  </data>
+  <data name="CountNotes" xml:space="preserve">
+    <value>Notes : {0}</value>
+  </data>
+  <data name="CurrentTrip" xml:space="preserve">
+    <value>voyage courant</value>
+  </data>
+  <data name="Date" xml:space="preserve">
+    <value>Date :</value>
+  </data>
+  <data name="Day" xml:space="preserve">
+    <value>Jour :</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>supprimer</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>modifier</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>accueil</value>
+  </data>
+  <data name="List" xml:space="preserve">
+    <value>liste</value>
+  </data>
+  <data name="Location" xml:space="preserve">
+    <value>Spécifier un lieu :</value>
+  </data>
+  <data name="Map" xml:space="preserve">
+    <value>Carte</value>
+  </data>
+  <data name="Message" xml:space="preserve">
+    <value>Message :</value>
+  </data>
+  <data name="EditNote" xml:space="preserve">
+    <value>Modifier la note</value>
+  </data>
+  <data name="NoteName" xml:space="preserve">
+    <value>Nom</value>
+  </data>
+  <data name="NoteInterestPoint" xml:space="preserve">
+    <value>Point d'intérêt</value>
+  </data>
+  <data name="NoteDate" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="NoteContent" xml:space="preserve">
+    <value>Contenu</value>
+  </data>
+  <data name="OldTrip" xml:space="preserve">
+    <value>voyages précédents</value>
+  </data>
+  <data name="POITitle" xml:space="preserve">
+    <value>Points d'intérêt</value>
+  </data>
+  <data name="Rename" xml:space="preserve">
+    <value>Renommer</value>
+  </data>
+  <data name="SampleProperty" xml:space="preserve">
+    <value>Exemple de valeur de propriété d'exécution</value>
+  </data>
+  <data name="SelectCountry" xml:space="preserve">
+    <value>Sélectionnez un pays : </value>
+  </data>
+  <data name="SelectDate" xml:space="preserve">
+    <value>Sélectionner une date : </value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>Paramètres</value>
+  </data>
+  <data name="Share" xml:space="preserve">
+    <value>partager sur...</value>
+  </data>
+  <data name="Sort" xml:space="preserve">
+    <value>Tri</value>
+  </data>
+  <data name="SortByCountry" xml:space="preserve">
+    <value>Trier par pays</value>
+  </data>
+  <data name="SortByDate" xml:space="preserve">
+    <value>Trier par date</value>
+  </data>
+  <data name="SortMode" xml:space="preserve">
+    <value>Mode de tri</value>
+  </data>
+  <data name="Timeline" xml:space="preserve">
+    <value>ligne de temps</value>
+  </data>
+  <data name="YourJournal" xml:space="preserve">
+    <value>votre journal</value>
+  </data>
+  <data name="YourMap" xml:space="preserve">
+    <value>votre carte</value>
+  </data>
+  <data name="YourTimeLine" xml:space="preserve">
+    <value>votre ligne de temps</value>
+  </data>
+  <data name="YourTravels" xml:space="preserve">
+    <value>vos voyages</value>
+  </data>
+  <data name="FinishTrip" xml:space="preserve">
+    <value>Terminer le voyage</value>
+  </data>
+  <data name="AddPOI" xml:space="preserve">
+    <value>Ajouter p. d'intérêt</value>
+  </data>
+  <data name="Statistic" xml:space="preserve">
+    <value>Statistiques</value>
+  </data>
+  <data name="MyNotes" xml:space="preserve">
+    <value>mes notes</value>
+  </data>
+  <data name="SeePhotos" xml:space="preserve">
+    <value>voir les photos...</value>
+  </data>
+  <data name="MyPhoto" xml:space="preserve">
+    <value>mes photos</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Enregistrer</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="EditTrip" xml:space="preserve">
+    <value>Modifier le voyage</value>
+  </data>
+  <data name="ChoosePicture" xml:space="preserve">
+    <value>choisir photo</value>
+  </data>
+  <data name="ConfirmationDeleteTrip" xml:space="preserve">
+    <value>Êtes-vous sûr de vouloir supprimer ce voyage?</value>
+  </data>
+  <data name="Select" xml:space="preserve">
+    <value>sélectionner</value>
+  </data>
+  <data name="ConfirmDeletePOIs" xml:space="preserve">
+    <value>Êtes-vous sûr de vouloir supprimer ces points d'intérêt? (Les notes et les photos avec ces points d'intérêt seront aussi supprimés)</value>
+  </data>
+  <data name="MyPoi" xml:space="preserve">
+    <value>points d'intérêt</value>
+  </data>
+  <data name="Lang_French" xml:space="preserve">
+    <value>Français</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>Langue</value>
+  </data>
+  <data name="WifiOnly" xml:space="preserve">
+    <value>Utiliser uniquement la Wi-Fi</value>
+  </data>
+  <data name="VersionNumber" xml:space="preserve">
+    <value>Numéro de version</value>
+  </data>
+  <data name="Error_EmptyPicture" xml:space="preserve">
+    <value>Vous devez choisir une image</value>
+  </data>
+  <data name="NotConnected" xml:space="preserve">
+    <value>Connexion internet désactivée</value>
+  </data>
+  <data name="InvalideSearch" xml:space="preserve">
+    <value>Aucun résultat trouvé pour : {0}</value>
+  </data>
+  <data name="Warning" xml:space="preserve">
+    <value>Avertissement</value>
+  </data>
+  <data name="ExamplePointInterest" xml:space="preserve">
+    <value>Tour Effeil</value>
+  </data>
+  <data name="EditPoi" xml:space="preserve">
+    <value>modifier p. d'intérêt</value>
+  </data>
+  <data name="PlacePOI" xml:space="preserve">
+    <value>Lieu</value>
+  </data>
+  <data name="NoteAllTime" xml:space="preserve">
+    <value>{0} note(s) dans ce voyage</value>
+  </data>
+  <data name="PictureToday" xml:space="preserve">
+    <value>{0} photo(s) aujourd'hui</value>
+  </data>
+  <data name="PictureAllTime" xml:space="preserve">
+    <value>{0} photo(s) dans ce voyage</value>
+  </data>
+  <data name="DefaultPoi" xml:space="preserve">
+    <value>Aucun POI sélectionné</value>
+  </data>
+  <data name="ConfirmFinishTrip" xml:space="preserve">
+    <value>Êtes-vous certain de vouloir terminer ce voyage?</value>
+  </data>
+  <data name="TravelFriends" xml:space="preserve">
+    <value>Amis de voyage</value>
+  </data>
+  <data name="NoPoi" xml:space="preserve">
+    <value>Aucun</value>
+  </data>
+  <data name="DepDest" xml:space="preserve">
+    <value>ville, (état, province, disctrict), pays</value>
+  </data>
+  <data name="Error_EmptyName" xml:space="preserve">
+    <value>Vous devez spécifier un nom</value>
+  </data>
+  <data name="Error_EmptyMessage" xml:space="preserve">
+    <value>Vous devez spécifier un message</value>
+  </data>
+  <data name="Error_EmptyDescription" xml:space="preserve">
+    <value>Vous devez spécifier une description</value>
+  </data>
+  <data name="Error_EmptyCoordinates" xml:space="preserve">
+    <value>Vous devez spécifier un départ et une destination</value>
+  </data>
+  <data name="ErrorsDetected" xml:space="preserve">
+    <value>Les erreurs suivantes se sont produites :</value>
+  </data>
+  <data name="Errors" xml:space="preserve">
+    <value>Erreurs</value>
+  </data>
+  <data name="ClearHistory" xml:space="preserve">
+    <value>Effacer l'historique</value>
+  </data>
+  <data name="RateApp" xml:space="preserve">
+    <value>Évaluer l'application</value>
+  </data>
+  <data name="CheckUpdates" xml:space="preserve">
+    <value>Mises à jour disponibles</value>
+  </data>
+  <data name="AboutUs" xml:space="preserve">
+    <value>Checkmapp est une application permettant de garder l'historique de ces voyages à travers le monde. Vous pouvez créer des notes, des photos et des points d'intérêt. De cette façon, vous pouvez garder de meilleurs souvenirs de vos aventures et les partager à vos proches.
+
+John-William Forcier
+Félix Baril
+Alexandre Roy</value>
+    <comment></comment>
+  </data>
+  <data name="AutoSync" xml:space="preserve">
+    <value>Synchronisation automatique de données</value>
+  </data>
+  <data name="Lang_English" xml:space="preserve">
+    <value>Anglais</value>
+  </data>
+  <data name="ConfirmDeletePOI" xml:space="preserve">
+    <value>Êtes-vous sûr de vouloir supprimer ce point d'intérêt? (Les notes et les photos avec ce point d'intérêt seront aussi supprimés)</value>
+  </data>
+  <data name="ConfirmationDeletePictures" xml:space="preserve">
+    <value>Êtes-vous sûr de vouloir supprimer ces photos?</value>
+  </data>
+  <data name="ConfirmationDeletePicture" xml:space="preserve">
+    <value>Êtes-vous sûr de vouloir supprimer cette photo?</value>
+  </data>
+  <data name="ConfirmationDeleteNotes" xml:space="preserve">
+    <value>Êtes-vous sûr de vouloir supprimer ces notes?</value>
+  </data>
+  <data name="ConfirmationDeleteNote" xml:space="preserve">
+    <value>Êtes-vous sûr de vouloir supprimer cette note?</value>
+  </data>
+  <data name="EditPicture" xml:space="preserve">
+    <value>Modifier la photo</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Annuler</value>
+  </data>
+  <data name="SeeNotes" xml:space="preserve">
+    <value>voir les notes...</value>
+  </data>
+  <data name="POITripTitle" xml:space="preserve">
+    <value>Points d'intérêt ({0})</value>
+  </data>
+  <data name="PhotoTripTitle" xml:space="preserve">
+    <value>Photos ({0})</value>
+  </data>
+  <data name="NoteTripTitle" xml:space="preserve">
+    <value>Notes ({0})</value>
+  </data>
+  <data name="TripEndDate" xml:space="preserve">
+    <value>Fin du voyage : {0}</value>
+  </data>
+  <data name="TripBeginDate" xml:space="preserve">
+    <value>Début du voyage : {0}</value>
+  </data>
+  <data name="NoteToday" xml:space="preserve">
+    <value>{0} note(s) aujourd'hui</value>
+  </data>
+  <data name="YourPosition" xml:space="preserve">
+    <value>votre position</value>
+  </data>
+  <data name="Loading" xml:space="preserve">
+    <value>Chargement...</value>
+  </data>
+  <data name="IamHere" xml:space="preserve">
+    <value>Je suis à : {0}</value>
+  </data>
+  <data name="Import" xml:space="preserve">
+    <value>Importer les données</value>
+  </data>
+  <data name="Export" xml:space="preserve">
+    <value>Exporter les données</value>
+  </data>
+  <data name="DataManagement" xml:space="preserve">
+    <value>Gestion des données (sauvegardes)</value>
+    <comment></comment>
+  </data>
+  <data name="ConfirmationImport" xml:space="preserve">
+    <value>Êtes-vous sûr de vouloir importer ces données? (Cela va remplacer ceux actuels)</value>
+  </data>
+  <data name="RestartApp" xml:space="preserve">
+    <value>Un redémarrage est nécessaire</value>
+  </data>
+  <data name="LocationError" xml:space="preserve">
+    <value>La localisation de votre position est désactivée dans les paramètres de votre téléphone.</value>
+  </data>
+  <data name="FileNotFound" xml:space="preserve">
+    <value>Aucun fichier valide n'a été trouvé dans le dossier Checkmapp de votre OneDrive.</value>
+  </data>
+  <data name="GetToPOI" xml:space="preserve">
+    <value>s'y rendre...</value>
+  </data>
+  <data name="AppCalendar" xml:space="preserve">
+    <value>Voulez-vous ajouter ce voyage à votre calendrier?</value>
+  </data>
+  <data name="Shopping" xml:space="preserve">
+    <value>Magasinage</value>
+  </data>
+  <data name="Park" xml:space="preserve">
+    <value>Parc</value>
+  </data>
+  <data name="Musee" xml:space="preserve">
+    <value>Musée</value>
+  </data>
+  <data name="Coffee" xml:space="preserve">
+    <value>Café</value>
+  </data>
+  <data name="SelectType" xml:space="preserve">
+    <value>Sélectionner le type</value>
+  </data>
+  <data name="Other" xml:space="preserve">
+    <value>Autre</value>
+  </data>
+  <data name="ImportLoading" xml:space="preserve">
+    <value>Importation en cours...</value>
+  </data>
+  <data name="ExportLoading" xml:space="preserve">
+    <value>Exportation en cours...</value>
+  </data>
+  <data name="InternetConnectionSettings" xml:space="preserve">
+    <value>Votre connexion internet est désactivée.</value>
+  </data>
+  <data name="InternetConnectionMap" xml:space="preserve">
+    <value>Votre connexion internet est désactivée. Pour accéder aux fonctionnalités de la carte, vous avez besoin de connexion internet ou de télécharger les cartes au préalable.</value>
+  </data>
+  <data name="POIObject" xml:space="preserve">
+    <value>Que voulez-vous faire avec les objets (notes, photos) reliés au point d'intérêt?</value>
+  </data>
+  <data name="NullPOIObject" xml:space="preserve">
+    <value>Enlever le lien avec ce POI</value>
+  </data>
+  <data name="DeletePOIObject" xml:space="preserve">
+    <value>Supprimer aussi les objets</value>
+  </data>
+  <data name="PlaceNearAdd" xml:space="preserve">
+    <value>Voulez-vous l'ajouter à vos points d'intérêt?</value>
+  </data>
+  <data name="SetEndDate" xml:space="preserve">
+    <value>Définir la date de fin</value>
+  </data>
+  <data name="ValidatorEndDate" xml:space="preserve">
+    <value>La date de fin doit être supérieure à la date de début du voyage.</value>
+  </data>
+  <data name="DBFileName" xml:space="preserve">
+    <value>Checkmapp.sdf</value>
+  </data>
+  <data name="Restaurant" xml:space="preserve">
+    <value>Restaurant</value>
+  </data>
+  <data name="Monument" xml:space="preserve">
+    <value>Monument</value>
+  </data>
+  <data name="VisitWebsite" xml:space="preserve">
+    <value>Visitez notre site Web</value>
+  </data>
+  <data name="LangRestartApp" xml:space="preserve">
+    <value>Vous devrez redémarrer l'application pour changer la langue.</value>
+  </data>
+  <data name="PlaceNearURI" xml:space="preserve">
+    <value>http://API.geonames.org/findNearbyWikipediaJSON?</value>
+  </data>
+  <data name="PlaceNearUsername" xml:space="preserve">
+    <value>checkmapp</value>
+  </data>
+  <data name="PlaceNearYou" xml:space="preserve">
+    <value>Lieux près de vous</value>
+  </data>
+  <data name="PlaceNearLocatePhone" xml:space="preserve">
+    <value>Localisation de votre téléphone en cours...</value>
+  </data>
+  <data name="Add" xml:space="preserve">
+    <value>Ajouter</value>
+  </data>
+  <data name="HoldFinger" xml:space="preserve">
+    <value>Tenir le doigt enfoncé sur la carte pour localiser l'endroit</value>
+  </data>
+  <data name="ResultPOI" xml:space="preserve">
+    <value>{0} points d'intérêt trouvés près de vous.</value>
+  </data>
+  <data name="ValidatorEndDateNow" xml:space="preserve">
+    <value>La date de fin doit être inférieure ou égale à la date actuelle.</value>
+  </data>
+  <data name="BuyApp" xml:space="preserve">
+    <value>N'oubliez pas d'acheter la version complète! (Jours restants : {0})</value>
+  </data>
+  <data name="ContinueTrial" xml:space="preserve">
+    <value>Continuer la version d'essai</value>
+  </data>
+  <data name="BuyNow" xml:space="preserve">
+    <value>Acheter maintenant</value>
+  </data>
+  <data name="TrialOver" xml:space="preserve">
+    <value>Votre version d'essai est terminé.</value>
+  </data>
+  <data name="Previous" xml:space="preserve">
+    <value>Précédent</value>
+  </data>
+  <data name="Next" xml:space="preserve">
+    <value>Suivant</value>
+  </data>
+  <data name="CannotChoosePic" xml:space="preserve">
+    <value>Une erreur est survenue avec cette photo.</value>
+  </data>
+</root>

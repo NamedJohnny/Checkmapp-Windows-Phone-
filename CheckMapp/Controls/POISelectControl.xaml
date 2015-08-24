@@ -1,0 +1,42 @@
+﻿<UserControl x:Class="CheckMapp.Controls.POISelectControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    d:DesignHeight="480" d:DesignWidth="480"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+             Loaded="UserControl_Loaded">
+
+    <UserControl.Resources>
+        <Storyboard x:Name="chkHide_Storyboard">
+            <DoubleAnimation Storyboard.TargetName="poiListPicker"
+            Storyboard.TargetProperty="Opacity"
+            From="1.0" To="0.0" Duration="0:0:1" />
+        </Storyboard>
+
+        <Storyboard x:Name="chkShow_Storyboard">
+            <DoubleAnimation Storyboard.TargetName="poiListPicker"
+            Storyboard.TargetProperty="Opacity"
+            From="0.0" To="1.0" Duration="0:0:1" />
+        </Storyboard>
+    </UserControl.Resources>
+    
+    <Grid x:Name="LayoutRoot" >
+        <StackPanel>
+            <TextBlock Text="{Binding Path=LocalizedResources.POITitle, Source={StaticResource LocalizedStrings}}" Style="{StaticResource PhoneTextLargeStyle}"></TextBlock>
+
+            <CheckBox IsChecked="{Binding NoneCheck,Mode=TwoWay}" x:Name="chkNoPOI" Grid.Row="1" Content="{Binding Path=LocalizedResources.NoPoi, Source={StaticResource LocalizedStrings}}" Checked="chkNoPOI_Checked" Unchecked="chkNoPOI_UnChecked"  />
+
+            <toolkit:ListPicker
+                    x:Name="poiListPicker"
+                    ItemsSource="{Binding PoiList,Mode=TwoWay}"
+                    SelectedItem="{Binding POISelected, Mode=TwoWay}"
+                    DisplayMemberPath="Name">
+            </toolkit:ListPicker>
+        </StackPanel>
+    </Grid>
+</UserControl>

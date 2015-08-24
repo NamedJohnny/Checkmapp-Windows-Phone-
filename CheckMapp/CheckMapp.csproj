@@ -1,0 +1,590 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\sqlite-net-wp8.3.8.4.3\build\windowsphone8\sqlite-net-wp8.props" Condition="Exists('..\packages\sqlite-net-wp8.3.8.4.3\build\windowsphone8\sqlite-net-wp8.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F4C51A4A-35EF-4E72-A5C5-F9C8D0A4EBBD}</ProjectGuid>
+    <ProjectTypeGuids>{C089C8C0-30E0-4E22-80C0-CE093F111A43};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CheckMapp</RootNamespace>
+    <AssemblyName>CheckMapp</AssemblyName>
+    <TargetFrameworkIdentifier>WindowsPhone</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v8.1</TargetFrameworkVersion>
+    <SilverlightVersion></SilverlightVersion>
+    <SilverlightApplication>true</SilverlightApplication>
+    <SupportedCultures>fr</SupportedCultures>
+    <XapOutputs>true</XapOutputs>
+    <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
+    <XapFilename>CheckMapp_$(Configuration)_$(Platform).xap</XapFilename>
+    <SilverlightManifestTemplate>Properties\AppManifest.xml</SilverlightManifestTemplate>
+    <SilverlightAppEntry>CheckMapp.App</SilverlightAppEntry>
+    <ValidateXaml>true</ValidateXaml>
+    <MinimumVisualStudioVersion>12.0</MinimumVisualStudioVersion>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+    <TargetFrameworkProfile />
+    <DefaultLanguage>en</DefaultLanguage>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\x86\Debug</OutputPath>
+    <DefineConstants>TRACE;DEBUG;SILVERLIGHT;WINDOWS_PHONE;USE_WP8_NATIVE_SQLITE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\x86\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|ARM' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\ARM\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|ARM' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\ARM\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DebugTrial|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\DebugTrial\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;SILVERLIGHT;WINDOWS_PHONE:TRIAL</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DebugTrial|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\DebugTrial\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;SILVERLIGHT;WINDOWS_PHONE;USE_WP8_NATIVE_SQLITE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DebugTrial|ARM'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM\DebugTrial\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;SILVERLIGHT;WINDOWS_PHONE;TRIAL</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Label="MultilingualAppToolkit">
+    <MultilingualAppToolkitVersion>3.0</MultilingualAppToolkitVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\BuyNowUserControl.xaml.cs">
+      <DependentUpon>BuyNowUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\LiveTilePicture.xaml.cs">
+      <DependentUpon>LiveTilePicture.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MapSelectControl.xaml.cs">
+      <DependentUpon>MapSelectControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PinButton.cs" />
+    <Compile Include="Controls\PinchAndZoomImage.xaml.cs">
+      <DependentUpon>PinchAndZoomImage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\POISelectControl.xaml.cs">
+      <DependentUpon>POISelectControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TimelineControl.xaml.cs">
+      <DependentUpon>TimelineControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TimelineElementControl.xaml.cs">
+      <DependentUpon>TimelineElementControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Converter\ArchiveTripTitle.cs" />
+    <Compile Include="Converter\ByteToImageConverter.cs" />
+    <Compile Include="Converter\BoldConverter.cs" />
+    <Compile Include="Converter\ButtonExtendConverter.cs" />
+    <Compile Include="Converter\InvertBoolConverter.cs" />
+    <Compile Include="Converter\POITypeValueConverter.cs" />
+    <Compile Include="Converter\POITypeImageConverter.cs" />
+    <Compile Include="Converter\NoteMessage.cs" />
+    <Compile Include="Converter\DateConverter.cs" />
+    <Compile Include="Design\DesignDataService.cs" />
+    <Compile Include="KeyGroup\AlphaKeyGroup.cs" />
+    <Compile Include="LocalizedStrings.cs" />
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Model\DatabaseDataContext.cs" />
+    <Compile Include="Model\DataService\DataServiceCommon.cs" />
+    <Compile Include="Model\DataService\DataServiceNote.cs" />
+    <Compile Include="Model\DataService\DataServicePicture.cs" />
+    <Compile Include="Model\DataService\DataServicePoi.cs" />
+    <Compile Include="Model\DataService\DataServiceTrip.cs" />
+    <Compile Include="Model\DataService\IDataService.cs" />
+    <Compile Include="Model\Tables\Note.cs" />
+    <Compile Include="Model\Tables\Picture.cs" />
+    <Compile Include="Model\Tables\PointOfInterest.cs" />
+    <Compile Include="Model\Tables\Trip.cs" />
+    <Compile Include="Model\Utils\DataTemplateSelector.cs" />
+    <Compile Include="Model\Utils\Language.cs" />
+    <Compile Include="Resources\AppResources1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AppResources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\EditableObject\Caretaker.cs" />
+    <Compile Include="Utils\EditableObject\Memento.cs" />
+    <Compile Include="Utils\PlaceNearToMap.cs" />
+    <Compile Include="ViewModels\MapViewModel.cs" />
+    <Compile Include="ViewModels\POIType.cs" />
+    <Compile Include="ViewModels\POIViewModels\SelectTypePOIViewModel.cs" />
+    <Compile Include="ViewModels\TripViewModels\SelectEndDateViewModel.cs" />
+    <Compile Include="Views\MapView.xaml.cs">
+      <DependentUpon>MapView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utils\Languages\LocalizationChangedEventArgs.cs" />
+    <Compile Include="Utils\Languages\LocalizationManager.cs" />
+    <Compile Include="Utils\Languages\SupportedLanguages.cs" />
+    <Compile Include="Utils\Settings\CMIsolatedStorageProperty.cs" />
+    <Compile Include="Utils\MapHelper.cs" />
+    <Compile Include="Utils\Settings\CMIsolatedStoragePropertyHelper.cs" />
+    <Compile Include="Utils\Settings\CMSettingsContainer.cs" />
+    <Compile Include="Utils\Utils.cs" />
+    <Compile Include="Utils\Validations\Validators\NoteValidator.cs" />
+    <Compile Include="Utils\Validations\ValidationErrorsHandler.cs" />
+    <Compile Include="Utils\Validations\ValidatorFactory.cs" />
+    <Compile Include="Utils\Validations\Validators\PhotoValidator.cs" />
+    <Compile Include="Utils\Validations\Validators\POIValidator.cs" />
+    <Compile Include="Utils\Validations\Validators\CustomValidators\ValidateTripCoordinates.cs" />
+    <Compile Include="Utils\Validations\Validators\TripValidator.cs" />
+    <Compile Include="ViewModels\Mode.cs" />
+    <Compile Include="ViewModels\NoteViewModels\AddEditNoteViewModel.cs" />
+    <Compile Include="ViewModels\NoteViewModels\ListNoteViewModel.cs" />
+    <Compile Include="ViewModels\NoteViewModels\NoteViewModel.cs" />
+    <Compile Include="ViewModels\PhotoViewModels\AddEditPhotoViewModel.cs" />
+    <Compile Include="ViewModels\PhotoViewModels\ListPhotoViewModel.cs" />
+    <Compile Include="ViewModels\PhotoViewModels\PhotoViewModel.cs" />
+    <Compile Include="ViewModels\POIViewModels\AddEditPOIViewModel.cs" />
+    <Compile Include="ViewModels\POIViewModels\ListPOIViewModel.cs" />
+    <Compile Include="ViewModels\SettingsViewModels\SettingsViewModel.cs" />
+    <Compile Include="ViewModels\StatisticViewModel.cs" />
+    <Compile Include="ViewModels\TripViewModels\AddEditTripViewModel.cs" />
+    <Compile Include="ViewModels\TripViewModels\TripViewModel.cs" />
+    <Compile Include="ViewModels\TripViewModels\CurrentViewModel.cs" />
+    <Compile Include="ViewModels\MainViewModel.cs" />
+    <Compile Include="ViewModels\DashboardViewModel.cs" />
+    <Compile Include="ViewModels\ArchivesViewModels\TimelineViewModel.cs" />
+    <Compile Include="ViewModels\ArchivesViewModels\ArchivesViewModel.cs" />
+    <Compile Include="ViewModels\ViewModelLocator.cs" />
+    <Compile Include="Views\NoteViews\AddEditNoteView.xaml.cs">
+      <DependentUpon>AddEditNoteView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NoteViews\ListNoteView.xaml.cs">
+      <DependentUpon>ListNoteView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NoteViews\NoteView.xaml.cs">
+      <DependentUpon>NoteView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PhotoViews\AddEditPhotoView.xaml.cs">
+      <DependentUpon>AddEditPhotoView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PhotoViews\ListPhotoView.xaml.cs">
+      <DependentUpon>ListPhotoView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PhotoViews\PhotoView.xaml.cs">
+      <DependentUpon>PhotoView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\POIViews\AddEditPOIView.xaml.cs">
+      <DependentUpon>AddEditPOIView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\POIViews\ListPOIView.xaml.cs">
+      <DependentUpon>ListPOIView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\POIViews\SelectTypePOI.xaml.cs">
+      <DependentUpon>SelectTypePOI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\StatisticView.xaml.cs">
+      <DependentUpon>StatisticView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TripViews\AddEditTripView.xaml.cs">
+      <DependentUpon>AddEditTripView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SettingsViews\SettingsView.xaml.cs">
+      <DependentUpon>SettingsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TripViews\SelectEndDateView.xaml.cs">
+      <DependentUpon>SelectEndDateView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TripViews\TripView.xaml.cs">
+      <DependentUpon>TripView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TripViews\CurrentView.xaml.cs">
+      <DependentUpon>CurrentView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DynamicContentControl.cs" />
+    <Compile Include="Views\DashboardView.xaml.cs">
+      <DependentUpon>DashboardView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ArchivesViews\TimelineView.xaml.cs">
+      <DependentUpon>TimelineView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ArchivesViews\ArchivesView.xaml.cs">
+      <DependentUpon>ArchivesView.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </ApplicationDefinition>
+    <Page Include="Controls\BuyNowUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\LiveTilePicture.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\MapSelectControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\PinButtonTemplate.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\PinchAndZoomImage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\POISelectControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\TimelineControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\TimelineElementControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\MapView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\NoteViews\AddEditNoteView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\NoteViews\ListNoteView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\NoteViews\NoteView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\PhotoViews\AddEditPhotoView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\PhotoViews\ListPhotoView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\PhotoViews\PhotoView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\POIViews\AddEditPOIView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\POIViews\ListPOIView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\POIViews\SelectTypePOI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\StatisticView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\TripViews\AddEditTripView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SettingsViews\SettingsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\TripViews\SelectEndDateView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\TripViews\TripView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\TripViews\CurrentView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ArchivesViews\ArchivesView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Resource Include="Themes\generic.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Resource>
+    <Page Include="Views\DashboardView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\ArchivesViews\TimelineView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest">
+      <SubType>Designer</SubType>
+    </AppxManifest>
+    <None Include="Fonts\LiveSymbol.ttf" />
+    <None Include="packages.config" />
+    <None Include="Properties\AppManifest.xml" />
+    <None Include="Properties\WMAppManifest.xml">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\AlignmentGrid.png" />
+    <Content Include="Assets\ApplicationIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\BadgeLogo.png" />
+    <Content Include="Assets\Logo.png" />
+    <Content Include="Assets\SplashScreen.png" />
+    <Content Include="Assets\SquareTile150x150.png" />
+    <Content Include="Assets\SquareTile71x71.png" />
+    <Content Include="Assets\StoreLogo.png" />
+    <Content Include="Assets\Tiles\FlipCycleTileLarge.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Tiles\FlipCycleTileMedium.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Tiles\FlipCycleTileSmall.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Tiles\IconicTileMediumLarge.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Tiles\IconicTileSmall.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\WideLogo.png" />
+    <Content Include="Images\add.png" />
+    <Content Include="Images\AddTripPin.png" />
+    <Content Include="Images\appbar.addclipboard.variant.png" />
+    <Content Include="Images\appbar.addflag.png" />
+    <Content Include="Images\appbar.arrow.left.png" />
+    <Content Include="Images\appbar.arrow.right.png" />
+    <Content Include="Images\appbar.calendar.day.png" />
+    <Content Include="Images\appbar.clipboard.variant.png" />
+    <Content Include="Images\appbar.delete.png" />
+    <Content Include="Images\appbar.eye.min.png" />
+    <Content Include="Images\appbar.eye.png" />
+    <Content Include="Images\appbar.flag.listpoi.png" />
+    <Content Include="Images\appbar.flag.png" />
+    <Content Include="Images\appbar.flag.wavy.png" />
+    <Content Include="Images\appbar.graph.line.up.png" />
+    <Content Include="Images\appbar.group.png" />
+    <Content Include="Images\appbar.list.check.png" />
+    <Content Include="Images\appbar.location.checkin.png" />
+    <Content Include="Images\appbar.location.png" />
+    <Content Include="Images\appbar.plane.rotated.45.png" />
+    <Content Include="Images\appbar.return.png" />
+    <Content Include="Images\appbar.social.sharethis.png" />
+    <Content Include="Images\cancel.png" />
+    <Content Include="Images\check.png" />
+    <Content Include="Images\ContinueTripPin.png" />
+    <Content Include="Images\edit.png" />
+    <Content Include="Images\feature.addcamera.png" />
+    <Content Include="Images\feature.camera.png" />
+    <Content Include="Images\feature.search.png" />
+    <Content Include="Images\feature.settings.png" />
+    <Content Include="Images\map.png" />
+    <Content Include="Images\MapPin.png" />
+    <Content Include="Images\minus.png" />
+    <Content Include="Images\poiLogo.png" />
+    <Content Include="Images\POIType\monument.png" />
+    <Content Include="Images\POIType\other.png" />
+    <Content Include="Images\POIType\bar.png" />
+    <Content Include="Images\POIType\coffee.png" />
+    <Content Include="Images\POIType\musee.png" />
+    <Content Include="Images\POIType\park.png" />
+    <Content Include="Images\POIType\restaurant.png" />
+    <Content Include="Images\POIType\shopping.png" />
+    <Content Include="Images\rose.png" />
+    <Content Include="Images\rose2.png" />
+    <Content Include="Images\save.png" />
+    <Content Include="Images\SettingsPin.png" />
+    <Content Include="Images\small.add.png" />
+    <Content Include="Images\vacance.jpg" />
+    <Content Include="Images\background.png" />
+    <Content Include="Images\filter.png" />
+    <Content Include="SplashScreenImage.jpg" />
+    <Content Include="Toolkit.Content\ApplicationBar.Add.png" />
+    <Content Include="Toolkit.Content\ApplicationBar.Cancel.png" />
+    <Content Include="Toolkit.Content\ApplicationBar.Check.png" />
+    <Content Include="Toolkit.Content\ApplicationBar.Delete.png" />
+    <Content Include="Toolkit.Content\ApplicationBar.Select.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Coding4Fun.Toolkit.Controls, Version=2.0.7.0, Culture=neutral, PublicKeyToken=c5fd7b72b1a17ce4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Coding4Fun.Toolkit.Controls.2.0.7\lib\windowsphone8\Coding4Fun.Toolkit.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="FluentValidation">
+      <HintPath>..\packages\FluentValidation.5.5.0.0\lib\portable-win+net40+sl50+wp80+wpa81\FluentValidation.dll</HintPath>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight">
+      <HintPath>..\packages\MvvmLightLibs.5.1.1.0\lib\wp81\GalaSoft.MvvmLight.dll</HintPath>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight.Extras">
+      <HintPath>..\packages\MvvmLightLibs.5.1.1.0\lib\wp81\GalaSoft.MvvmLight.Extras.dll</HintPath>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight.Platform">
+      <HintPath>..\packages\MvvmLightLibs.5.1.1.0\lib\wp81\GalaSoft.MvvmLight.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Live">
+      <HintPath>..\packages\LiveSDK.5.6.1\lib\WindowsPhone81\Microsoft.Live.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Phone.Controls, Version=8.0.0.0, Culture=neutral, PublicKeyToken=24eec0d8c86cda1e, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Phone.Controls.Toolkit">
+      <HintPath>..\packages\WPtoolkit.4.2013.08.16\lib\wp8\Microsoft.Phone.Controls.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http, Version=1.5.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.28\lib\sl4-windowsphone71\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Extensions">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.28\lib\sl4-windowsphone71\System.Net.Http.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives, Version=1.5.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.28\lib\sl4-windowsphone71\System.Net.Http.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Interactivity, Version=3.9.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmLightLibs.5.1.1.0\lib\wp81\System.Windows.Interactivity.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\AppResources.fr.resx">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AppResources.fr.xlf</DependentUpon>
+      <culture>fr</culture>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\AppResources.resx">
+      <SubType>Designer</SubType>
+      <LastGenOutput>AppResources1.Designer.cs</LastGenOutput>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <XliffResource Include="Resources\AppResources.fr.xlf">
+      <Generator>XliffResxGenerator</Generator>
+      <LastGenOutput>AppResources.fr.resx</LastGenOutput>
+      <SubType>Designer</SubType>
+    </XliffResource>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).$(TargetFrameworkVersion).Overrides.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions />
+  <Import Project="..\packages\sqlite-net-wp8.3.8.4.3\build\windowsphone8\sqlite-net-wp8.targets" Condition="Exists('..\packages\sqlite-net-wp8.3.8.4.3\build\windowsphone8\sqlite-net-wp8.targets')" />
+  <Import Project="..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\Multilingual App Toolkit\Microsoft.Multilingual.ResxResources.targets" Label="MultilingualAppToolkit" />
+  <Target Name="EnsureBclBuildImported" BeforeTargets="BeforeBuild" Condition="'$(BclBuildImported)' == ''">
+    <Error Condition="!Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=317567." HelpKeyword="BCLBUILD2001" />
+    <Error Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="The build restored NuGet packages. Build the project again to include these packages in the build. For more information, see http://go.microsoft.com/fwlink/?LinkID=317568." HelpKeyword="BCLBUILD2002" />
+  </Target>
+</Project>

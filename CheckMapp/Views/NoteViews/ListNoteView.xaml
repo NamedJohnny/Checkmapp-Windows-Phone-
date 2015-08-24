@@ -1,0 +1,114 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="CheckMapp.Views.NoteViews.ListNoteView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    Loaded="PhoneApplicationPage_Loaded"
+    DataContext="{Binding ListNoteViewModel, Source={StaticResource Locator}}"
+    >
+    <phone:PhoneApplicationPage.Resources>
+
+        <shell:ApplicationBar x:Key="AppBarList" IsVisible="True" IsMenuEnabled="True">
+            <shell:ApplicationBarIconButton  x:Name="IconMultiSelect"  Click="IconMultiSelect_Click"  IconUri="/Images/appbar.list.check.png" Text="[select]"/>
+            <shell:ApplicationBarIconButton  x:Name="IconAdd"  Click="IconAdd_Click"  IconUri="/Images/add.png" Text="[add]"/>
+        </shell:ApplicationBar>
+
+        <shell:ApplicationBar x:Key="AppBarListSelect" IsVisible="True" IsMenuEnabled="True">
+            <shell:ApplicationBarIconButton    x:Name="IconDelete"  Click="IconDelete_Click"  IconUri="/Images/appbar.delete.png" Text="[delete]"/>
+        </shell:ApplicationBar>
+
+        <phone:JumpListItemBackgroundConverter x:Key="BackgroundConverter"/>
+        <phone:JumpListItemForegroundConverter x:Key="ForegroundConverter"/>
+
+        <Style x:Key="JumpListStyle" TargetType="phone:LongListSelector">
+            <Setter Property="LayoutMode" Value="List" />
+            <Setter Property="Margin" Value="12,12,0,0"/>
+            <Setter Property="ItemTemplate">
+                <Setter.Value>
+                    <DataTemplate>
+                        <Border Background="{Binding Converter={StaticResource BackgroundConverter}}" 
+                                Width="470" 
+                                Height="70" 
+                                Margin="6">
+                            <TextBlock Text="{Binding Key}"
+                                       Foreground="{Binding Converter={StaticResource ForegroundConverter}}"                                       
+                                       FontFamily="{StaticResource PhoneFontFamilySemiBold}"
+                                       FontSize="28"  
+                                       Padding="2"
+                                       VerticalAlignment="Bottom"/>
+                        </Border>
+                    </DataTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <DataTemplate x:Key="GroupHeader">
+            <Border Background="Transparent">
+                <Border Background="Transparent" BorderBrush="Transparent" BorderThickness="1"	
+                        Width="400" Height="90" 				 
+                        HorizontalAlignment="Left">
+                    <TextBlock Text="{Binding Key}" 
+                               Foreground="{StaticResource PhoneAccentBrush}" 
+                               FontSize="28"
+                               Padding="2"                                
+                               FontFamily="{StaticResource PhoneFontFamilySemiLight}"
+                               HorizontalAlignment="Left"
+                               VerticalAlignment="Center"/>
+                </Border>
+            </Border>
+        </DataTemplate>
+
+        <DataTemplate x:Key="ItemTemplate">
+            <StackPanel Margin="0,-10,25,30" Tap="StackPanel_Tap">
+                <toolkit:ContextMenuService.ContextMenu >
+                    <toolkit:ContextMenu IsZoomEnabled="True" Opened="ContextMenu_Opened" x:Name="ContextMenuNote" >
+                        <toolkit:MenuItem x:Name="EditNote" Click="ContextMenu_Click" Header="{Binding Path=LocalizedResources.Edit, Source={StaticResource LocalizedStrings}}" />
+                        <toolkit:MenuItem x:Name="DeleteNote" Click="ContextMenu_Click" Header="{Binding Path=LocalizedResources.Delete, Source={StaticResource LocalizedStrings}}" />
+                    </toolkit:ContextMenu>
+                </toolkit:ContextMenuService.ContextMenu>
+                <TextBlock Tag="{Binding Id}" Visibility="Collapsed"/>
+                <TextBlock Text="{Binding Title}" Style="{StaticResource PhoneTextLargeStyle}" TextWrapping="Wrap"/>
+                <TextBlock Text="{Binding Date, StringFormat=t}" Style="{StaticResource PhoneTextNormalStyle}" TextWrapping="Wrap"/>
+                <TextBlock Text="{Binding Message, Converter={StaticResource NoteMessage}}" TextWrapping="Wrap" Style="{StaticResource PhoneTextSmallStyle}"></TextBlock>
+            </StackPanel>
+        </DataTemplate>
+
+    </phone:PhoneApplicationPage.Resources>
+    <!--LayoutRoot est la grille racine où tout le contenu de la page est placé-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contient le nom de l'application et le titre de la page-->
+        <StackPanel Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock Text="{Binding Trip.Name}" Style="{StaticResource PhoneTextNormalStyle}"/>
+            <TextBlock Text="{Binding Path=LocalizedResources.MyNotes, Source={StaticResource LocalizedStrings}}" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+        </StackPanel>
+
+        <!--ContentPanel - placez tout contenu supplémentaire ici-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            <toolkit:LongListMultiSelector Name="NoteLLS" Margin="13,-30,0,0"
+                                        ItemsSource="{Binding GroupedNotes}"
+                                        ItemTemplate="{StaticResource ItemTemplate}"                     
+                                        GroupHeaderTemplate="{StaticResource GroupHeader}"
+                                        JumpListStyle="{StaticResource JumpListStyle}" 
+                                        IsGroupingEnabled="True"
+                                           SelectionChanged="NoteLLS_SelectionChanged"
+                                           IsSelectionEnabledChanged="NoteLLS_IsSelectionEnabledChanged"
+                                        />
+        </Grid>
+    </Grid>
+
+</phone:PhoneApplicationPage>

@@ -1,0 +1,73 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="CheckMapp.Views.NoteViews.AddEditNoteView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    Loaded="PhoneApplicationPage_Loaded"
+     xmlns:myControl="clr-namespace:CheckMapp.Controls"
+    DataContext="{Binding AddEditNoteViewModel, Source={StaticResource Locator}}"
+    >
+    
+    <phone:PhoneApplicationPage.Resources>
+        <Storyboard x:Name="chkHide_Storyboard">
+            <DoubleAnimation Storyboard.TargetName="poiListPicker"
+            Storyboard.TargetProperty="Opacity"
+            From="1.0" To="0.0" Duration="0:0:1" />
+        </Storyboard>
+
+        <Storyboard x:Name="chkShow_Storyboard">
+            <DoubleAnimation Storyboard.TargetName="poiListPicker"
+            Storyboard.TargetProperty="Opacity"
+            From="0.0" To="1.0" Duration="0:0:1" />
+        </Storyboard>
+    </phone:PhoneApplicationPage.Resources>
+
+    <!--LayoutRoot est la grille racine où tout le contenu de la page est placé-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contient le nom de l'application et le titre de la page-->
+        <StackPanel Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock Text="{Binding Note.Trip.Name}" Style="{StaticResource PhoneTextNormalStyle}"/>
+            <TextBlock x:Name="TitleTextblock" Text="[add/edit note]" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+        </StackPanel>
+
+        <!--ContentPanel - placez tout contenu supplémentaire ici-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            <ScrollViewer>
+            <StackPanel Grid.Row="0" Margin="12,17,0,28">
+                <TextBlock Text="{Binding Path=LocalizedResources.NoteName, Source={StaticResource LocalizedStrings}}"  Style="{StaticResource PhoneTextLargeStyle}"/>
+                    <TextBox InputScope="Text" x:Name="NameTextBox" Text="{Binding NoteName, Mode=TwoWay}"></TextBox>
+
+                <TextBlock x:Name="DateTextBlock" Text="{Binding Path=LocalizedResources.NoteDate, Source={StaticResource LocalizedStrings}}"  Style="{StaticResource PhoneTextLargeStyle}"/>
+                    <toolkit:DatePicker Name="datePicker"  Value="{Binding NoteDate, Mode=TwoWay}"></toolkit:DatePicker>
+
+                    <myControl:POISelectControl NoneCheck="{Binding NoneCheck,Mode=TwoWay}" x:Name="POIControl" POISelected="{Binding POISelected,Mode=TwoWay}" PoiList="{Binding PoiList}"></myControl:POISelectControl>
+
+                    <TextBlock  Text="{Binding Path=LocalizedResources.NoteContent, Source={StaticResource LocalizedStrings}}"  Style="{StaticResource PhoneTextLargeStyle}"/>
+                    <TextBox InputScope="Text" AcceptsReturn="True" TextWrapping="Wrap" Height="224" x:Name="messageTextBox" Text="{Binding Message, Mode=TwoWay}"></TextBox>     
+            </StackPanel>
+            </ScrollViewer>
+        </Grid>
+    </Grid>
+    
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
+            <shell:ApplicationBarIconButton  x:Name="IconSave"  Click="IconSave_Click"  IconUri="/Images/save.png" Text="[save]"/>
+            <shell:ApplicationBarIconButton  x:Name="IconCancel"  Click="IconCancel_Click"  IconUri="/Images/cancel.png" Text="[cancel]"/>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>
+</phone:PhoneApplicationPage>

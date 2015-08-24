@@ -1,0 +1,43 @@
+﻿<UserControl xmlns:Controls="clr-namespace:Microsoft.Phone.Maps.Controls;assembly=Microsoft.Phone.Maps"  x:Class="CheckMapp.Views.DashboardView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    xmlns:vm="clr-namespace:CheckMapp.ViewModel"
+    d:DesignHeight="480" d:DesignWidth="480"
+    xmlns:myControl="clr-namespace:CheckMapp.Controls"
+             DataContext="{Binding DashboardViewModel, Source={StaticResource Locator}}">
+
+    <Grid x:Name="LayoutRoot"  >
+        <Canvas Name="myCanvas">
+            <!--<Path Stroke="White" Opacity="0.5" StrokeThickness="1">
+                <Path.Data>
+                    <GeometryGroup x:Name="connectors"/>
+                </Path.Data>
+            </Path>-->
+
+            <StackPanel Canvas.Left="33"  Height="271" Width="156" >
+                <myControl:PinButton Canvas.Left="19"  Tap="pinButtonMap_Tap" Canvas.Top="179" toolkit:TiltEffect.IsTiltEnabled="True"   x:Name="pinButtonMap"  ImageSource="/Images/MapPin.png"   Template="{StaticResource PinButton}"  />
+                <TextBlock TextAlignment="Center" HorizontalAlignment="Center" Foreground="White" Text="{Binding Path=LocalizedResources.Map, Source={StaticResource LocalizedStrings}}" ></TextBlock>
+            </StackPanel>
+            <StackPanel Canvas.Left="215" Canvas.Top="230"  Width="118" >
+                <myControl:PinButton Tap="pinButtonCurrentTrip_Tap" toolkit:TiltEffect.IsTiltEnabled="True"  Height="206"  x:Name="pinButtonCurrentTrip"  ImageSource="/Images/ContinueTripPin.png" Template="{StaticResource PinButton}" />
+                <TextBlock Name="textCurrentTrip"  TextAlignment="Center" HorizontalAlignment="Center" TextWrapping="Wrap" Text="{Binding Path=LocalizedResources.ContinueTrip, Source={StaticResource LocalizedStrings}}" Foreground="White" ></TextBlock>
+            </StackPanel>
+            <StackPanel  Canvas.Left="63" Width="100" Canvas.Top="275" Height="240">
+                <myControl:PinButton Tap="pinButtonAddTrip_Tap"  HorizontalContentAlignment="Center" Canvas.Left="234" Canvas.Top="25"  toolkit:TiltEffect.IsTiltEnabled="True" Height="167"  x:Name="pinButtonAddTrip"  ImageSource="/Images/AddTripPin.png" Template="{StaticResource PinButton}" />
+                <TextBlock Name="textAddTrip"  TextAlignment="Center" HorizontalAlignment="Center" Foreground="White"  TextWrapping="Wrap" Text="{Binding Path=LocalizedResources.AddTrip, Source={StaticResource LocalizedStrings}}" ></TextBlock>
+            </StackPanel>
+            <StackPanel Canvas.Left="228" Canvas.Top="52">
+                <myControl:PinButton Tap="pinButtonSettings_Tap" toolkit:TiltEffect.IsTiltEnabled="True" Height="139"   x:Name="pinButtonSettings"  ImageSource="/Images/SettingsPin.png" Template="{StaticResource PinButton}"  />
+                <TextBlock TextAlignment="Center" TextWrapping="Wrap" Foreground="White" Text="{Binding Path=LocalizedResources.Settings, Source={StaticResource LocalizedStrings}}" ></TextBlock>
+            </StackPanel>
+        </Canvas>
+    </Grid>
+</UserControl>
